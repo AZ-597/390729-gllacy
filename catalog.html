@@ -4,16 +4,187 @@
 <head>
   <meta charset="UTF-8">
   <title>Каталог</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="main-header">
-
+    <a href="index.html">
+      <img src="#" alt="HTML Academy logo" class="brand-logo">
+    </a>
+    <ul class="main-menu">
+      <li class="main-menu__item--active">
+        <a href="catalog.html">Каталог</a>
+        <ul class="main-submenu">
+          <li class="main-submenu__item main-submenu__item--lead">
+            <a href="#">Новинки</a>
+          </li>
+          <li class="main-submenu__item">
+            <a href="#">Сливочные</a>
+          </li>
+          <li class="main-submenu__item">
+            <a href="#">Щербеты</a>
+          </li>
+          <li class="main-submenu__item">
+            <a href="#">Фруктовый лёд</a>
+          </li>
+          <li class="main-submenu__item">
+            <a href="#">Мелорин</a>
+          </li>
+        </ul>
+      </li>
+      <li class="main-menu__item">
+        <a href="#">Доставка и оплата</a>
+      </li>
+      <li class="main-menu__item">
+        <a href="#">О компании</a>
+      </li>
+    </ul>
+    <div class="user-bar">
+      <button class="user-bar__btn">Поиск</button>
+      <button class="user-bar__btn">Вход</button>
+      <button class="user-bar__btn">Корзина</button>
+    </div>
+    <ul class="user-bar">
+      <li class="user-bar__item">[Search]</li>
+      <li class="user-bar__item">Вход</li>
+      <li class="user-bar__item"><span>2</span> товара
+        <ul class="order-list">
+          <li class="order-list__order-item">
+            <span class="remove-order-item">&times;</span>
+            <img src="№" alt="Маленькая мороженка" class="order-item__thumb">
+            <span class="order-item__qty">1,5 кг x 200 руб.</span>
+            <span class="order-item__cost">300 руб.</span>
+          </li>
+        </ul>
+        <b class="order-list__total-price">Итого:
+          <span class="total-price__value">750 руб.</span>
+        </b>
+        <button class="btn">Оформить заказ</button>
+      </li>
+    </ul>
+    <p class="schedule">С 10 до 20, ежедневно
+      <br>
+      <a href="tel:+78214502525">8 812 450-25-25</a>
+    </p>
   </header>
+
+  <nav class="main-breadcrumbs">
+    <a href="#">Главная</a>
+    <a href="#">Каталог</a>
+    <a href="#">Сливочное</a>
+  </nav>
+
   <main>
+    <h1>Сливочное мороженое</h1>
+    <form class="settings">
+      <label for="sort">Сортировка:</label>
+      <select name="sorting" id="sort">
+        <option value="byPopular">по популярности</option>
+        <option value="inexpensiveFirst">сначала недорогие</option>
+        <option value="expensiveFirst">сначала дорогие</option>
+        <option value="byFatContent">по жирности</option>
+      </select>
+      <label for="price-range">Цена:</label>
+      <input type="range" id="price-range" name="price-range" min="100" max="1000" value="500">
+      <label for="fat-content">Жирность:</label>
+      <fieldset id="fat-content">
+        <label for="r1"></label>
+        <input type="radio" name="fat-value" id="r1" value="zero">0%</label>
+        <label for="r2"></label>
+        <input type="radio" name="fat-value" id="r2" value="below10">до 10%</label>
+        <label for="r3"></label>
+        <input type="radio" name="fat-value" id="r3" value="below30">до 30%</label>
+        <label for="r4"></label>
+        <input type="radio" name="fat-value" id="r4" value="above30">выше 30%</label>
+      </fieldset>
+      <label for="toppings">Наполнители:</label>
+      <fieldset id="toppings">
+        <label for="cb1"></label>
+        <input type="checkbox" id="ch1" value="chocolate">шоколадные</label>
+        <label for="cb2"></label>
+        <input type="checkbox" id="ch2" value="sugar">сахарные присыпки</label>
+        <label for="cb3"></label>
+        <input type="checkbox" id="ch3" value="fruit">фрукты</label>
+        <label for="cb4"></label>
+        <input type="checkbox" id="ch4" value="syrup">сиропы</label>
+        <label for="cb5"></label>
+        <input type="checkbox" id="ch5" value="jam">джемы</label>
+      </fieldset>
+      <button type="submit">Применить</button>
+    </form>
+    <section class="catalog">
+      <div class="shopping-card">
+        <img src="#" class="shopping-card__img" alt="Здесь должна быть вкусная мороженка">
+        <span class="shopping-card__cost">310 руб.</span>
+        <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой
+        </a>
+        <button class="btn">Быстрый просмотр</button>
+      </div>
+      <!-- Здесь будут другие карточки товаров с актуалными данными когда станет ясно что карточка сверстана верно -->
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <!-- А эти бесконечные бррр чтобы было видно родителя в браузере -->
+    </section>
+    <nav class="pagination">
+      <a href="#">
+        <</a>
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">></a>
+    </nav>
 
   </main>
+
   <footer class="main-footer">
+    <ul class="socials">
+      <li class="socials__item">
+        <a href="#">TW</a>
+      </li>
+      <li class="socials__item">
+        <a href="#">IG</a>
+      </li>
+      <li class="socials__item">
+        <a href="#">FB</a>
+      </li>
+      <li class="socials__item">
+        <a href="#">VK</a>
+      </li>
+    </ul>
+    <ul class="doc-links">
+      <li class="doc-links__link">
+        <a href="#">Для поставщиков</a>
+      </li>
+      <li class="doc-links__link">
+        <a href="#">Наши документы</a>
+      </li>
+      <li class="doc-links__link">
+        <a href="#">О производстве</a>
+      </li>
+      <li class="doc-links__link">
+        <a href="#">Экологические стандарты</a>
+      </li>
+    </ul>
+    <p class="copyright">
+      <img src="№" alt="HTML Academy logo">
+      <br> Сделано в
+      <a href="#">HTML Academy</a> &copy; 2017
+    </p>
 
   </footer>
 </body>

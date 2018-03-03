@@ -1,3 +1,86 @@
-.myselector {
-  color: brown;
+/* Все эти стили вспомогательные. Они служат только для наглядности представления в браузере */
+
+* {
+  margin: 0.5em;
+}
+
+.main-header {
+  background: lightgoldenrodyellow;
+}
+
+.main-footer {
+  background: lightblue;
+}
+
+.main-breadcrumbs {
+  background: palegreen;
+}
+
+.shopping-card {
+  background: pink;
+}
+.popular .shopping-card::before {
+  content: "Хит";
+  text-transform: uppercase;
+}
+
+.settings {
+  background: whitesmoke;
+}
+
+.catalog , .popular {
+  background: rgb(255, 225, 255);
+}
+
+.pagination {
+  background: thistle;
+}
+.modal {
+  background: tomato;
+}
+.get-in-touch {
+  margin: 3em;
+  background: rgba(226, 192, 43, 0.336);
+}
+.blog__post {
+  background: skyblue;
+}
+.subscribe {
+  background: rosybrown;
+}
+.advantages {
+  background: seagreen;
+}
+.contact {
+  background: rgb(250, 218, 114);
+}
+.promo {
+  background: rgb(255, 55, 55);
+}
+.promo-case {
+  background: rgba(240, 248, 255, 0.288);
+}
+.socials {
+  background: rgba(161, 61, 255, 0.349);
+}
+.doc-links {
+  background: rgba(90, 61, 255, 0.349);
+}
+.copyright {
+  background: rgba(61, 97, 255, 0.349);
+}
+.main-menu {
+  background: rgba(0, 0, 0, 0.082);
+}
+.user-bar {
+  background: rgba(0, 0, 0, 0.164);
+}
+.schedule {
+  background: rgba(0, 0, 0, 0.26);
+}
+.carousel {
+  background: aquamarine;
+}
+.carousel__slide {
+  background: aqua;
 }
