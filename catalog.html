@@ -11,7 +11,7 @@
 <body>
   <header class="main-header">
     <a href="index.html" class="main-logo">
-      <img src="img/gllacy-logo.svg" alt="Gllacy logo" class="main-logo__img">
+      <img src="img/gllacy-logo.svg" width="154px" height="64px" alt="Gllacy logo" class="main-logo__img">
     </a>
     <ul class="main-menu">
       <li class="main-menu__item main-menu__item--active">
@@ -76,74 +76,90 @@
   <main>
     <h1>Сливочное мороженое</h1>
     <form class="settings">
-      <label for="sort">Сортировка:</label>
+
+      <label class="settings__label" for="sort">Сортировка:</label>
       <select name="sorting" id="sort">
         <option value="byPopular">по популярности</option>
         <option value="inexpensiveFirst">сначала недорогие</option>
         <option value="expensiveFirst">сначала дорогие</option>
         <option value="byFatContent">по жирности</option>
       </select>
-      <label for="price-range">Цена:</label>
+
+      <label class="settings__label" for="price-range">Цена:</label>
       <input type="range" id="price-range" name="price-range" min="100" max="1000" value="500">
-      <label for="fat-content">Жирность:</label>
-      <fieldset id="fat-content">
-        <label for="fat-zero"></label>
-        <input type="radio" name="fat-value" id="fat-zero" value="zero">0%</label>
-        <label for="fat-below10"></label>
-        <input type="radio" name="fat-value" id="fat-below10" value="below10">до 10%</label>
-        <label for="fat-below30"></label>
-        <input type="radio" name="fat-value" id="fat-below30" value="below30">до 30%</label>
-        <label for="fat-above30"></label>
-        <input type="radio" name="fat-value" id="fat-above30" value="above30">выше 30%</label>
+
+      <label class="settings__label" for="fat-content">Жирность:</label>
+      <fieldset class="field-radio" id="fat-content">
+        <input class="field-radio__input" type="radio" name="fat-value" id="fat-zero" value="zero">
+        <label class="field-radio__label" for="fat-zero">0%</label>
+        <input class="field-radio__input" type="radio" name="fat-value" id="fat-below10" value="below10">
+        <label class="field-radio__label" for="fat-below10">до 10%</label>
+        <input class="field-radio__input" type="radio" name="fat-value" id="fat-below30" value="below30">
+        <label class="field-radio__label" for="fat-below30">до 30%</label>
+        <input class="field-radio__input" type="radio" name="fat-value" id="fat-above30" value="above30">
+        <label class="field-radio__label" for="fat-above30">выше 30%</label>
       </fieldset>
-      <label for="toppings">Наполнители:</label>
-      <fieldset id="toppings">
-        <label for="topping-chocolate"></label>
-        <input type="checkbox" name="topping" id="topping-chocolate" value="chocolate">шоколадные</label>
-        <label for="topping-sugar"></label>
-        <input type="checkbox" name="topping" id="topping-sugar" value="sugar">сахарные присыпки</label>
-        <label for="topping-fruit"></label>
-        <input type="checkbox" name="topping" id="topping-fruit" value="fruit">фрукты</label>
-        <label for="topping-syrup"></label>
-        <input type="checkbox" name="topping" id="topping-syrup" value="syrup">сиропы</label>
-        <label for="topping-jam"></label>
-        <input type="checkbox" name="topping" id="topping-jam" value="jam">джемы</label>
+
+      <label class="settings__label" for="toppings">Наполнители:</label>
+      <fieldset class="field-checkbox" id="toppings">
+        <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-chocolate" value="chocolate">
+        <label class="field-checkbox__label" for="topping-chocolate">шоколадные</label>
+        <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-sugar" value="sugar">
+        <label class="field-checkbox__label" for="topping-sugar">сахарные присыпки</label>
+        <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-fruit" value="fruit">
+        <label class="field-checkbox__label" for="topping-fruit">фрукты</label>
+        <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-syrup" value="syrup">
+        <label class="field-checkbox__label" for="topping-syrup">сиропы</label>
+        <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-jam" value="jam">
+        <label class="field-checkbox__label" for="topping-jam">джемы</label>
       </fieldset>
+
       <button type="submit">Применить</button>
+
     </form>
+
+
     <section class="catalog">
-      <div class="shopping-card">
-        <img src="#" class="shopping-card__img" alt="Здесь должна быть вкусная мороженка">
-        <p class="shopping-card__cost">310 руб.</p>
-        <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой
-        </a>
-        <button class="btn">Быстрый просмотр</button>
-      </div>
-      <!-- Здесь будут другие карточки товаров с актуалными данными когда станет ясно что карточка сверстана верно -->
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <!-- А эти бесконечные бррр чтобы было видно родителя в браузере -->
+        <div class="shopping-card">
+            <img src="img/ice-cream/ic-p-(1).jpg" width="267px" height="267px" class="shopping-card__img" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <p class="shopping-card__cost">310 руб.</p>
+            <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой
+            </a>
+            <button class="btn">Быстрый просмотр</button>
+          </div>
+          <div class="shopping-card">
+            <img src="img/ice-cream/ic-p-(2).jpg" width="267px" height="267px" class="shopping-card__img" alt="Сливочно-кофейное с кусочками шоколада">
+            <p class="shopping-card__cost">380 руб.</p>
+            <a href="#">Сливочно-кофейное с кусочками шоколада
+            </a>
+            <button class="btn">Быстрый просмотр</button>
+          </div>
+          <div class="shopping-card">
+            <img src="img/ice-cream/ic-p-(3).jpg" width="267px" height="267px" class="shopping-card__img" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <p class="shopping-card__cost">355 руб.</p>
+            <a href="#">Сливочно-клубничное с присыпкой из белого шоколада
+            </a>
+            <button class="btn">Быстрый просмотр</button>
+          </div>
+          <div class="shopping-card">
+            <img src="img/ice-cream/ic-p-(4).jpg" width="267px" height="267px" class="shopping-card__img" alt="Сливочное крем-брюле с карамельной подливкой">
+            <p class="shopping-card__cost">415 руб.</p>
+            <a href="#">Сливочное крем-брюле с карамельной подливкой
+            </a>
+            <button class="btn">Быстрый просмотр</button>
+          </div>
+
+          <!-- More ice-cream in next commit :D -->
     </section>
 
     <p class="catalog-pagination">
       <a href="#" class="catalog-pagination__item">[&lAarr;;]</a>
-          <a href="#" class="catalog-pagination__item">1</a>
-          <a href="#" class="catalog-pagination__item">2</a>
-          <a href="#" class="catalog-pagination__item">3</a>
-          <a href="#" class="catalog-pagination__item">4</a>
-          <a href="#" class="catalog-pagination__item">5</a>
-          <a href="#" class="catalog-pagination__item">[&rAarr;]</a>
+      <a href="#" class="catalog-pagination__item catalog-pagination__item--current">1</a>
+      <a href="#" class="catalog-pagination__item">2</a>
+      <a href="#" class="catalog-pagination__item">3</a>
+      <a href="#" class="catalog-pagination__item">4</a>
+      <a href="#" class="catalog-pagination__item">5</a>
+      <a href="#" class="catalog-pagination__item">[&rAarr;]</a>
     </p>
 
   </main>
@@ -179,7 +195,7 @@
     </ul>
     <p class="copyright">
       <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/htmlacademy-logo.svg" alt="HTML Academy logo">
+        <img src="img/htmlacademy-logo.svg" width="108px" height="39px" alt="HTML Academy logo">
       </a>
       <br> Сделано в
       <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017
