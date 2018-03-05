@@ -3,19 +3,21 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Глейси</title>
+  <title>Глейси</title>
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="main-header">
-    <img src="#" alt="HTML Academy logo" class="brand-logo">
+    <a href="#" class="main-logo">
+      <img src="img/gllacy-logo.svg" alt="Gllacy logo" class="main-logo__img">
+    </a>
     <ul class="main-menu">
       <li class="main-menu__item">
         <a href="catalog.html">Каталог</a>
         <ul class="main-submenu">
-          <li class="main-submenu__item--lead">
+          <li class="main-submenu__item main-submenu__item--lead">
             <a href="#">Новинки</a>
           </li>
           <li class="main-submenu__item">
@@ -42,14 +44,14 @@
     <ul class="user-bar">
       <li class="user-bar__item">[Search]
         <p>
-          <input type="search" placeholder="Что ищем?">
+          <input class="field-text" type="search" name="search" placeholder="Что ищем?">
         </p>
       </li>
       <li class="user-bar__item">Вход
-        <form>
-          <input type="email" name="user" placeholder="Электронная почта">
-          <input type="password" name="password" placeholder="Пароль">
-          <button type="submit">Войти</button>
+        <form class="sign-up-form" method="POST">
+          <input class="field-text" type="email" name="user" placeholder="Электронная почта">
+          <input class="field-text" type="password" name="password" placeholder="Пароль">
+          <button class="btn" type="submit">Войти</button>
           <a href="#">Забыли пароль?</a>
           <a href="#">Новая регистрация</a>
         </form>
@@ -67,22 +69,22 @@
 
   <section class="carousel">
     <div class="carousel__slide">
-      <img src="#" alt="Офигенное огромное мороженое!!!!!" class="slide__image">
+      <img src="img/slider/slide-1.png" alt="Крем-брюле и пломбир с малиновым джемом" class="slide__image">
       <strong class="slide__lead">Крем-брюле и пломбир с малиновым джемом</strong>
     </div>
     <div class="carousel__slide">
-      <img src="#" alt="Офигенное огромное мороженое!!!!!" class="slide__image">
+      <img src="img/slider/slide-2.png" alt="Шоколадный пломбир и лимонный сорбет" class="slide__image">
       <strong class="slide__lead">Шоколадный пломбир и лимонный сорбет</strong>
     </div>
     <div class="carousel__slide">
-      <img src="#" alt="Офигенное огромное мороженое!!!!!" class="slide__image">
+      <img src="img/slider/slide-3.png" alt="Пломбир с помадкой и клубничный щербет" class="slide__image">
       <strong class="slide__lead">Пломбир с помадкой и клубничный щербет</strong>
     </div>
     <button class="btn btn--big">Давайте оба!</button>
     <ul class="carousel__pagination">
-      <li class="pagination__btn">[O]</li>
-      <li class="pagination__btn">[O]</li>
-      <li class="pagination__btn">[O]</li>
+      <li class="carousel__pagination-btn">[O]</li>
+      <li class="carousel__pagination-btn">[O]</li>
+      <li class="carousel__pagination-btn">[O]</li>
     </ul>
   </section>
 
@@ -107,36 +109,36 @@
     <section class="popular">
       <h2>Хит-парад</h2>
       <div class="shopping-card">
-        <img src="#" class="shopping-card__img" alt="Здесь должна быть вкусная мороженка">
-        <span class="shopping-card__cost">310 руб.</span>
+        <img src="img/ice-cream/ic-p-(1).jpg" class="shopping-card__img" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="shopping-card__cost">310 руб.</p>
         <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой
         </a>
         <button class="btn">Быстрый просмотр</button>
       </div>
       <div class="shopping-card">
-        <img src="#" class="shopping-card__img" alt="Здесь должна быть вкусная мороженка">
-        <span class="shopping-card__cost">380 руб.</span>
+        <img src="img/ice-cream/ic-p-(2).jpg" class="shopping-card__img" alt="Сливочно-кофейное с кусочками шоколада">
+        <p class="shopping-card__cost">380 руб.</p>
         <a href="#">Сливочно-кофейное с кусочками шоколада
         </a>
         <button class="btn">Быстрый просмотр</button>
       </div>
       <div class="shopping-card">
-        <img src="#" class="shopping-card__img" alt="Здесь должна быть вкусная мороженка">
-        <span class="shopping-card__cost">355 руб.</span>
+        <img src="img/ice-cream/ic-p-(3).jpg" class="shopping-card__img" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+        <p class="shopping-card__cost">355 руб.</p>
         <a href="#">Сливочно-клубничное с присыпкой из белого шоколада
         </a>
         <button class="btn">Быстрый просмотр</button>
       </div>
       <div class="shopping-card">
-        <img src="#" class="shopping-card__img" alt="Здесь должна быть вкусная мороженка">
-        <span class="shopping-card__cost">415 руб.</span>
+        <img src="img/ice-cream/ic-p-(4).jpg" class="shopping-card__img" alt="Сливочное крем-брюле с карамельной подливкой">
+        <p class="shopping-card__cost">415 руб.</p>
         <a href="#">Сливочное крем-брюле с карамельной подливкой
         </a>
         <button class="btn">Быстрый просмотр</button>
       </div>
     </section>
 
-    <article class="advantages">
+    <section class="advantages">
       <h2>Преимущества</h2>
 
       <b class="advantages__title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
@@ -150,21 +152,31 @@
       </p>
       <p class="advantages__item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять
         в пути и позволяет сохранить превосходный вкус.</p>
-    </article>
+    </section>
 
     <article class="blog__post">
       <b>В нашем новом блоге</b>
       <a href="#" class="blog__post-link">10 способов сервировки фруктовых щербетов к столу
       </a>
     </article>
-    <p class="subscribe">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не
-      спамить и не слать всякой ненужной ерунды. Честно =)
-      <input type="email" placeholder="Электронная почта">
-      <button type="submit" class="btn">Отправить</button>
-    </p>
+
+    <section class="subscribe">
+      <p class="subscribe">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не
+        спамить и не слать всякой ненужной ерунды. Честно =)
+        <input class="field-text" type="email" placeholder="Электронная почта">
+        <button class="btn" type="submit">Отправить</button>
+      </p>
+    </section>
+
     <section class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1998.6495499521993!2d30.322196465623897!3d59.937957169116274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0YPQuy4g0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8gMTkvOCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sru!4v1519941420469"
-        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <!-- ВАЖНО! -->
+
+      <iframe src="https://snazzymaps.com/embed/52710" width="100%" height="430px" style="border:none;">
+        <img src="#" alt="Карта">Ваш браузер не поддерживает iframe — обновите его!</iframe>
+
+      <!-- Могу ли я использовать для карты сторонний сервис, дабы сделать её интерактивной?
+      Верно ли я построил конструкцию для отображения изображения карты вместо интерактивной карты? Верно ли добавлено сообщение для тех у кого не поддерживается iframe?
+      Прокомментируй, пожалуйста! -->
 
       <article class="contact">
         <small>Адрес главного офиса и офлайн-магазина:</small>
@@ -180,6 +192,7 @@
     </section>
 
   </main>
+
   <footer class="main-footer">
     <ul class="socials">
       <li class="socials__item">
@@ -196,23 +209,25 @@
       </li>
     </ul>
     <ul class="doc-links">
-      <li class="doc-links__link">
+      <li class="doc-links__item">
         <a href="#">Для поставщиков</a>
       </li>
-      <li class="doc-links__link">
+      <li class="doc-links__item">
         <a href="#">Наши документы</a>
       </li>
-      <li class="doc-links__link">
+      <li class="doc-links__item">
         <a href="#">О производстве</a>
       </li>
-      <li class="doc-links__link">
+      <li class="doc-links__item">
         <a href="#">Экологические стандарты</a>
       </li>
     </ul>
     <p class="copyright">
-      <img src="№" alt="HTML Academy logo">
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="img/htmlacademy-logo.svg" alt="HTML Academy logo">
+      </a>
       <br> Сделано в
-      <a href="#">HTML Academy</a> &copy; 2017
+      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017
     </p>
 
   </footer>
@@ -220,11 +235,11 @@
   <section class="modal">
     <div class="get-in-touch">
       <b>Мы обязательно вам ответим!</b>
-      <form method="POST">
-        <input type="text" placeholder="Как вас зовут?">
-        <input type="email" placeholder="Ваша почта для ответа?">
-        <textarea cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
-        <button type="submit">Отправить</button>
+      <form class="get-in-touch-form" method="POST">
+        <input class="field-text" type="text" placeholder="Как вас зовут?">
+        <input class="field-text" type="email" placeholder="Ваша почта для ответа?">
+        <textarea class="field-textarea" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
+        <button class="btn" type="submit">Отправить</button>
       </form>
       <span class="close-modal">&times;</span>
     </div>

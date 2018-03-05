@@ -10,11 +10,11 @@
 
 <body>
   <header class="main-header">
-    <a href="index.html">
-      <img src="#" alt="HTML Academy logo" class="brand-logo">
+    <a href="index.html" class="main-logo">
+      <img src="img/gllacy-logo.svg" alt="Gllacy logo" class="main-logo__img">
     </a>
     <ul class="main-menu">
-      <li class="main-menu__item--active">
+      <li class="main-menu__item main-menu__item--active">
         <a href="catalog.html">Каталог</a>
         <ul class="main-submenu">
           <li class="main-submenu__item main-submenu__item--lead">
@@ -41,19 +41,16 @@
         <a href="#">О компании</a>
       </li>
     </ul>
-    <div class="user-bar">
-      <button class="user-bar__btn">Поиск</button>
-      <button class="user-bar__btn">Вход</button>
-      <button class="user-bar__btn">Корзина</button>
-    </div>
+
     <ul class="user-bar">
       <li class="user-bar__item">[Search]</li>
       <li class="user-bar__item">Вход</li>
-      <li class="user-bar__item"><span>2</span> товара
+      <li class="user-bar__item">
+        <span>2</span> товара
         <ul class="order-list">
           <li class="order-list__order-item">
             <span class="remove-order-item">&times;</span>
-            <img src="№" alt="Маленькая мороженка" class="order-item__thumb">
+            <img src="#" alt="Маленькая мороженка" class="order-item__thumb">
             <span class="order-item__qty">1,5 кг x 200 руб.</span>
             <span class="order-item__cost">300 руб.</span>
           </li>
@@ -70,11 +67,11 @@
     </p>
   </header>
 
-  <nav class="main-breadcrumbs">
+  <p class="main-breadcrumbs">
     <a href="#">Главная</a>
     <a href="#">Каталог</a>
     <a href="#">Сливочное</a>
-  </nav>
+  </p>
 
   <main>
     <h1>Сливочное мороженое</h1>
@@ -90,34 +87,34 @@
       <input type="range" id="price-range" name="price-range" min="100" max="1000" value="500">
       <label for="fat-content">Жирность:</label>
       <fieldset id="fat-content">
-        <label for="r1"></label>
-        <input type="radio" name="fat-value" id="r1" value="zero">0%</label>
-        <label for="r2"></label>
-        <input type="radio" name="fat-value" id="r2" value="below10">до 10%</label>
-        <label for="r3"></label>
-        <input type="radio" name="fat-value" id="r3" value="below30">до 30%</label>
-        <label for="r4"></label>
-        <input type="radio" name="fat-value" id="r4" value="above30">выше 30%</label>
+        <label for="fat-zero"></label>
+        <input type="radio" name="fat-value" id="fat-zero" value="zero">0%</label>
+        <label for="fat-below10"></label>
+        <input type="radio" name="fat-value" id="fat-below10" value="below10">до 10%</label>
+        <label for="fat-below30"></label>
+        <input type="radio" name="fat-value" id="fat-below30" value="below30">до 30%</label>
+        <label for="fat-above30"></label>
+        <input type="radio" name="fat-value" id="fat-above30" value="above30">выше 30%</label>
       </fieldset>
       <label for="toppings">Наполнители:</label>
       <fieldset id="toppings">
-        <label for="cb1"></label>
-        <input type="checkbox" id="ch1" value="chocolate">шоколадные</label>
-        <label for="cb2"></label>
-        <input type="checkbox" id="ch2" value="sugar">сахарные присыпки</label>
-        <label for="cb3"></label>
-        <input type="checkbox" id="ch3" value="fruit">фрукты</label>
-        <label for="cb4"></label>
-        <input type="checkbox" id="ch4" value="syrup">сиропы</label>
-        <label for="cb5"></label>
-        <input type="checkbox" id="ch5" value="jam">джемы</label>
+        <label for="topping-chocolate"></label>
+        <input type="checkbox" name="topping" id="topping-chocolate" value="chocolate">шоколадные</label>
+        <label for="topping-sugar"></label>
+        <input type="checkbox" name="topping" id="topping-sugar" value="sugar">сахарные присыпки</label>
+        <label for="topping-fruit"></label>
+        <input type="checkbox" name="topping" id="topping-fruit" value="fruit">фрукты</label>
+        <label for="topping-syrup"></label>
+        <input type="checkbox" name="topping" id="topping-syrup" value="syrup">сиропы</label>
+        <label for="topping-jam"></label>
+        <input type="checkbox" name="topping" id="topping-jam" value="jam">джемы</label>
       </fieldset>
       <button type="submit">Применить</button>
     </form>
     <section class="catalog">
       <div class="shopping-card">
         <img src="#" class="shopping-card__img" alt="Здесь должна быть вкусная мороженка">
-        <span class="shopping-card__cost">310 руб.</span>
+        <p class="shopping-card__cost">310 руб.</p>
         <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой
         </a>
         <button class="btn">Быстрый просмотр</button>
@@ -138,16 +135,16 @@
       <br>
       <!-- А эти бесконечные бррр чтобы было видно родителя в браузере -->
     </section>
-    <nav class="pagination">
-      <a href="#">
-        <</a>
-          <a href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
-          <a href="#">4</a>
-          <a href="#">5</a>
-          <a href="#">></a>
-    </nav>
+
+    <p class="catalog-pagination">
+      <a href="#" class="catalog-pagination__item">[&lAarr;;]</a>
+          <a href="#" class="catalog-pagination__item">1</a>
+          <a href="#" class="catalog-pagination__item">2</a>
+          <a href="#" class="catalog-pagination__item">3</a>
+          <a href="#" class="catalog-pagination__item">4</a>
+          <a href="#" class="catalog-pagination__item">5</a>
+          <a href="#" class="catalog-pagination__item">[&rAarr;]</a>
+    </p>
 
   </main>
 
@@ -167,26 +164,28 @@
       </li>
     </ul>
     <ul class="doc-links">
-      <li class="doc-links__link">
+      <li class="doc-links__item">
         <a href="#">Для поставщиков</a>
       </li>
-      <li class="doc-links__link">
+      <li class="doc-links__item">
         <a href="#">Наши документы</a>
       </li>
-      <li class="doc-links__link">
+      <li class="doc-links__item">
         <a href="#">О производстве</a>
       </li>
-      <li class="doc-links__link">
+      <li class="doc-links__item">
         <a href="#">Экологические стандарты</a>
       </li>
     </ul>
     <p class="copyright">
-      <img src="№" alt="HTML Academy logo">
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="img/htmlacademy-logo.svg" alt="HTML Academy logo">
+      </a>
       <br> Сделано в
-      <a href="#">HTML Academy</a> &copy; 2017
+      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017
     </p>
-
   </footer>
+
 </body>
 
 </html>
