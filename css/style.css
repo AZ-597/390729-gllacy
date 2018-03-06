@@ -1,4 +1,0 @@
-.popular .shopping-card::before {
-  content: "Хит";
-  text-transform: uppercase;
-}
