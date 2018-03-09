@@ -45,19 +45,32 @@
     <ul class="user-bar">
       <li class="user-bar__item">[Search]</li>
       <li class="user-bar__item">Вход</li>
-      <li class="user-bar__item">[Basket--active] 2 товара
+      <li class="user-bar__item">
+        [Basket--active] 2 товара
+        <div class="order">
+          <ul class="order__order-list order-list">
+            <li class="order-list__order-item order-item">
+              <button class="order-item__remove" aria-label="Удалить товар из списка заказа">&times;</button>
+              <img class="order-item__thumb" src="#" alt="Маленькая мороженка">
+              <span class="order-item__qty">1,5 кг x
+                <span class="order-item__price">200 руб.</span>
+              </span>
+              <span class="order-item__cost">300 руб.</span>
+            </li>
+            <!-- More items -->
+          </ul>
+          <p class="order__order-total order-total">Итого:
+            <span class="order-total__value">750 руб.</span>
+          </p>
+          <button class="btn order__checkout" type="button">Оформить заказ</button>
+        </div>
+      </li>
+
+      <!-- <li class="user-bar__item">[Basket--active] 2 товара
         <ul class="order-list">
           <li class="order-list__order-item">
-            <span class="remove-order-item">&times;</span>
-            <img src="#" alt="Маленькая мороженка" class="order-item__thumb">
-            <span class="order-item__qty">1,5 кг x
-              <span class="order-item__price">200 руб.</span>
-            </span>
-            <span class="order-item__cost">300 руб.</span>
-          </li>
-          <li class="order-list__order-item">
-            <span class="remove-order-item">&times;</span>
-            <img src="#" alt="Маленькая мороженка" class="order-item__thumb">
+            <button class="close-modal" type="button" aria-label="Удалить товар из заказа">&times;</button>
+            <img class="order-item__thumb" src="#" alt="Маленькая мороженка">
             <span class="order-item__qty">1,5 кг x
               <span class="order-item__price">200 руб.</span>
             </span>
@@ -68,25 +81,32 @@
           <span class="total-price__value">750 руб.</span>
         </b>
         <button class="btn">Оформить заказ</button>
-      </li>
+      </li> -->
+
     </ul>
+
+
     <p class="schedule">С 10 до 20, ежедневно
       <br>
       <a href="tel:+78214502525">8 812 450-25-25</a>
     </p>
   </header>
 
-  <p class="main-breadcrumbs">
-    <a href="#">Главная</a>
-    <a href="#">Каталог</a>
-    <a href="#">Сливочное</a>
-  </p>
+
 
   <main>
-    <h1>Сливочное мороженое</h1>
-    <form class="settings" method="GET">
 
-      <div class="settings__field-select">
+    <p class="main-breadcrumbs">
+      <a href="#">Главная</a>
+      <a href="#">Каталог</a>
+      <a href="#">Сливочное</a>
+    </p>
+
+    <h1>Сливочное мороженое</h1>
+
+    <form class="settings" method="GET" action="https://echo.htmlacademy.ru">
+
+      <div class="settings__field-select field-select">
         <label class="field-select__label" for="sort">Сортировка:</label>
         <select class="field-select__select" id="sort" name="sorting">
           <option value="byPopular">по популярности</option>
@@ -96,7 +116,7 @@
         </select>
       </div>
 
-      <div class="settings__field-range">
+      <div class="settings__field-range field-range">
         <label class="field-range__label" for="price-range">Цена:</label>
         <input class="field-range__range" id="price-range" type="range" name="price-range" min="100" max="1000" value="500">
       </div>
@@ -104,19 +124,19 @@
       <fieldset class="settings__fieldset" id="fat-content">
         <legend class="settings__legend">Жирность:</legend>
 
-        <div class="settings__fieldset-radio">
+        <div class="settings__fieldset-radio field-radio">
           <input class="field-radio__input" type="radio" name="fat-value" id="fat-zero" value="zero">
           <label class="field-radio__label" for="fat-zero">0%</label>
         </div>
-        <div class="settings__fieldset-radio">
+        <div class="settings__fieldset-radio field-radio">
           <input class="field-radio__input" type="radio" name="fat-value" id="fat-below10" value="below10">
           <label class="field-radio__label" for="fat-below10">до 10%</label>
         </div>
-        <div class="settings__fieldset-radio">
+        <div class="settings__fieldset-radio field-radio">
           <input class="field-radio__input" type="radio" name="fat-value" id="fat-below30" value="below30">
           <label class="field-radio__label" for="fat-below30">до 30%</label>
         </div>
-        <div class="settings__fieldset-radio">
+        <div class="settings__fieldset-radio field-radio">
           <input class="field-radio__input" type="radio" name="fat-value" id="fat-above30" value="above30">
           <label class="field-radio__label" for="fat-above30">выше 30%</label>
         </div>
@@ -125,23 +145,23 @@
       <fieldset class="settings__fieldset" id="toppings">
         <legend class="settings__legend">Наполнители:</legend>
 
-        <div class="settings__fieldset-checkbox">
+        <div class="settings__fieldset-checkbox field-checkbox">
           <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-chocolate" value="chocolate">
           <label class="field-checkbox__label" for="topping-chocolate">шоколадные</label>
         </div>
-        <div class="settings__fieldset-checkbox">
+        <div class="settings__fieldset-checkbox field-checkbox">
           <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-sugar" value="sugar">
           <label class="field-checkbox__label" for="topping-sugar">сахарные присыпки</label>
         </div>
-        <div class="settings__fieldset-checkbox">
+        <div class="settings__fieldset-checkbox field-checkbox">
           <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-fruit" value="fruit">
           <label class="field-checkbox__label" for="topping-fruit">фрукты</label>
         </div>
-        <div class="settings__fieldset-checkbox">
+        <div class="settings__fieldset-checkbox field-checkbox">
           <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-syrup" value="syrup">
           <label class="field-checkbox__label" for="topping-syrup">сиропы</label>
         </div>
-        <div class="settings__fieldset-checkbox">
+        <div class="settings__fieldset-checkbox field-checkbox">
           <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-jam" value="jam">
           <label class="field-checkbox__label" for="topping-jam">джемы</label>
         </div>
@@ -158,120 +178,120 @@
         <p class="shopping-card__cost">310 руб.</p>
         <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой
         </a>
-        <button class="btn">Быстрый просмотр</button>
+        <button class="btn" type="button">Быстрый просмотр</button>
       </div>
       <div class="shopping-card">
         <img src="img/ice-cream/ic-p-(2).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочно-кофейное с кусочками шоколада">
         <p class="shopping-card__cost">380 руб.</p>
         <a href="#">Сливочно-кофейное с кусочками шоколада
         </a>
-        <button class="btn">Быстрый просмотр</button>
+        <button class="btn" type="button">Быстрый просмотр</button>
       </div>
       <div class="shopping-card">
         <img src="img/ice-cream/ic-p-(3).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочно-клубничное с присыпкой из белого шоколада">
         <p class="shopping-card__cost">355 руб.</p>
         <a href="#">Сливочно-клубничное с присыпкой из белого шоколада
         </a>
-        <button class="btn">Быстрый просмотр</button>
+        <button class="btn" type="button">Быстрый просмотр</button>
       </div>
       <div class="shopping-card">
         <img src="img/ice-cream/ic-p-(4).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочное крем-брюле с карамельной подливкой">
         <p class="shopping-card__cost">415 руб.</p>
         <a href="#">Сливочное крем-брюле с карамельной подливкой
         </a>
-        <button class="btn">Быстрый просмотр</button>
+        <button class="btn" type="button">Быстрый просмотр</button>
       </div>
 
       <!-- More ice-cream in next commit :D -->
 
       <div class="shopping-card">
-          <img src="img/ice-cream/ic-p-(1).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="shopping-card__cost">310 руб.</p>
-          <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой
-          </a>
-          <button class="btn">Быстрый просмотр</button>
-        </div>
-        <div class="shopping-card">
-          <img src="img/ice-cream/ic-p-(2).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочно-кофейное с кусочками шоколада">
-          <p class="shopping-card__cost">380 руб.</p>
-          <a href="#">Сливочно-кофейное с кусочками шоколада
-          </a>
-          <button class="btn">Быстрый просмотр</button>
-        </div>
-        <div class="shopping-card">
-          <img src="img/ice-cream/ic-p-(3).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-          <p class="shopping-card__cost">355 руб.</p>
-          <a href="#">Сливочно-клубничное с присыпкой из белого шоколада
-          </a>
-          <button class="btn">Быстрый просмотр</button>
-        </div>
-        <div class="shopping-card">
-          <img src="img/ice-cream/ic-p-(4).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочное крем-брюле с карамельной подливкой">
-          <p class="shopping-card__cost">415 руб.</p>
-          <a href="#">Сливочное крем-брюле с карамельной подливкой
-          </a>
-          <button class="btn">Быстрый просмотр</button>
-        </div>
+        <img src="img/ice-cream/ic-p-(1).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="shopping-card__cost">310 руб.</p>
+        <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой
+        </a>
+        <button class="btn" type="button">Быстрый просмотр</button>
+      </div>
+      <div class="shopping-card">
+        <img src="img/ice-cream/ic-p-(2).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочно-кофейное с кусочками шоколада">
+        <p class="shopping-card__cost">380 руб.</p>
+        <a href="#">Сливочно-кофейное с кусочками шоколада
+        </a>
+        <button class="btn" type="button">Быстрый просмотр</button>
+      </div>
+      <div class="shopping-card">
+        <img src="img/ice-cream/ic-p-(3).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+        <p class="shopping-card__cost">355 руб.</p>
+        <a href="#">Сливочно-клубничное с присыпкой из белого шоколада
+        </a>
+        <button class="btn" type="button">Быстрый просмотр</button>
+      </div>
+      <div class="shopping-card">
+        <img src="img/ice-cream/ic-p-(4).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочное крем-брюле с карамельной подливкой">
+        <p class="shopping-card__cost">415 руб.</p>
+        <a href="#">Сливочное крем-брюле с карамельной подливкой
+        </a>
+        <button class="btn" type="button">Быстрый просмотр</button>
+      </div>
 
-        <div class="shopping-card">
+      <div class="shopping-card">
         <img src="img/ice-cream/ic-ctlg-(1).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочное с брусничным джемом">
         <p class="shopping-card__cost">325 руб.</p>
         <a href="#">Сливочное с брусничным джемом</a>
-        <button class="btn">Быстрый просмотр</button>
+        <button class="btn" type="button">Быстрый просмотр</button>
       </div>
       <div class="shopping-card">
         <img src="img/ice-cream/ic-ctlg-(2).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочно-черничное с цельными ягодами черники">
         <p class="shopping-card__cost">410 руб.</p>
         <a href="#">Сливочно-черничное с цельными ягодами черники</a>
-        <button class="btn">Быстрый просмотр</button>
+        <button class="btn" type="button">Быстрый просмотр</button>
       </div>
       <div class="shopping-card">
         <img src="img/ice-cream/ic-ctlg-(3).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочно-лимонное с карамельной присыпкой">
         <p class="shopping-card__cost">375 руб.</p>
         <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
-        <button class="btn">Быстрый просмотр</button>
+        <button class="btn" type="button">Быстрый просмотр</button>
       </div>
       <div class="shopping-card">
         <img src="img/ice-cream/ic-ctlg-(4).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочное с шоколадной стружкой">
         <p class="shopping-card__cost">320 руб.</p>
         <a href="#">Сливочное с шоколадной стружкой
         </a>
-        <button class="btn">Быстрый просмотр</button>
+        <button class="btn" type="button">Быстрый просмотр</button>
       </div>
 
       <div class="shopping-card">
-          <img src="img/ice-cream/ic-ctlg-(5).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочно-ванильное с кусочками шоколада">
-          <p class="shopping-card__cost">440 руб.</p>
-          <a href="#">Сливочно-ванильное с кусочками шоколада</a>
-          <button class="btn">Быстрый просмотр</button>
-        </div>
-        <div class="shopping-card">
-          <img src="img/ice-cream/ic-ctlg-(6).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочноe с ментоловым сиропом">
-          <p class="shopping-card__cost">435 руб.</p>
-          <a href="#">Сливочноe с ментоловым сиропом
-          </a>
-          <button class="btn">Быстрый просмотр</button>
-        </div>
-        <div class="shopping-card">
-          <img src="img/ice-cream/ic-ctlg-(7).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочное с кусочками черного шоколада">
-          <p class="shopping-card__cost">355 руб.</p>
-          <a href="#">Сливочное с кусочками черного шоколада
-          </a>
-          <button class="btn">Быстрый просмотр</button>
-        </div>
-        <div class="shopping-card">
-          <img src="img/ice-cream/ic-ctlg-(8).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочное с мятным сиропом">
-          <p class="shopping-card__cost">420 руб.</p>
-          <a href="#">Сливочное с мятным сиропом
-          </a>
-          <button class="btn">Быстрый просмотр</button>
-        </div>
+        <img src="img/ice-cream/ic-ctlg-(5).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочно-ванильное с кусочками шоколада">
+        <p class="shopping-card__cost">440 руб.</p>
+        <a href="#">Сливочно-ванильное с кусочками шоколада</a>
+        <button class="btn" type="button">Быстрый просмотр</button>
+      </div>
+      <div class="shopping-card">
+        <img src="img/ice-cream/ic-ctlg-(6).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочноe с ментоловым сиропом">
+        <p class="shopping-card__cost">435 руб.</p>
+        <a href="#">Сливочноe с ментоловым сиропом
+        </a>
+        <button class="btn" type="button">Быстрый просмотр</button>
+      </div>
+      <div class="shopping-card">
+        <img src="img/ice-cream/ic-ctlg-(7).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочное с кусочками черного шоколада">
+        <p class="shopping-card__cost">355 руб.</p>
+        <a href="#">Сливочное с кусочками черного шоколада
+        </a>
+        <button class="btn" type="button">Быстрый просмотр</button>
+      </div>
+      <div class="shopping-card">
+        <img src="img/ice-cream/ic-ctlg-(8).jpg" width="267" height="267" class="shopping-card__img" alt="Сливочное с мятным сиропом">
+        <p class="shopping-card__cost">420 руб.</p>
+        <a href="#">Сливочное с мятным сиропом
+        </a>
+        <button class="btn" type="button">Быстрый просмотр</button>
+      </div>
 
 
     </section>
 
     <p class="catalog-pagination">
-      <a href="#" class="catalog-pagination__item">[&lAarr;;]</a>
+      <a href="#" class="catalog-pagination__item catalog-pagination__item--disabled">[&lAarr;;]</a>
       <a href="#" class="catalog-pagination__item catalog-pagination__item--current">1</a>
       <a href="#" class="catalog-pagination__item">2</a>
       <a href="#" class="catalog-pagination__item">3</a>

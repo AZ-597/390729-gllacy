@@ -43,22 +43,24 @@
     </ul>
     <ul class="user-bar">
       <li class="user-bar__item">[Search]
-        <div class="field-text">
-          <label class="field-text__label" for="user-bar-search">Это пустой люйбл, который положен по БЭМ</label>
-          <input class="field-text__input" id="user-bar-search" type="search" name="search" placeholder="Что ищем?">
-        </div>
+        <form class="search-form" action="https://echo.htmlacademy.ru">
+          <div class="field-text">
+            <label class="field-text__label visually-hidden" for="user-bar-search">Поиск по сайту</label>
+            <input class="field-text__input" id="user-bar-search" type="search" name="search" placeholder="Что ищем?">
+          </div>
+        </form>
       </li>
 
       <li class="user-bar__item">Вход
-        <form class="sign-up-form" method="POST">
+        <form class="sign-up-form" action="https://echo.htmlacademy.ru">
 
           <div class="field-text">
-            <label class="field-text__label" for="sign-up-form-name">Это пустой люйбл, который положен по БЭМ</label>
+            <label class="field-text__label visually-hidden" for="sign-up-form-name">Электронная почта для входа на сайт</label>
             <input class="field-text__input" id="sign-up-form-name" type="email" name="user" placeholder="Электронная почта">
           </div>
 
           <div class="field-text">
-            <label class="field-text__label" for="sign-up-form-pass">Это пустой люйбл, который положен по БЭМ</label>
+            <label class="field-text__label visually-hidden" for="sign-up-form-pass">Пароль для входа на сайт</label>
             <input class="field-text__input" id="sign-up-form-pass" type="password" name="password" placeholder="Пароль">
           </div>
 
@@ -142,7 +144,7 @@
         <p class="shopping-card__cost">310 руб.</p>
         <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой
         </a>
-        <button class="btn">Быстрый просмотр</button>
+        <button class="btn" type="button">Быстрый просмотр</button>
       </div>
 
       <div class="shopping-card">
@@ -151,7 +153,7 @@
         <p class="shopping-card__cost">380 руб.</p>
         <a href="#">Сливочно-кофейное с кусочками шоколада
         </a>
-        <button class="btn">Быстрый просмотр</button>
+        <button class="btn" type="button">Быстрый просмотр</button>
       </div>
 
       <div class="shopping-card">
@@ -160,7 +162,7 @@
         <p class="shopping-card__cost">355 руб.</p>
         <a href="#">Сливочно-клубничное с присыпкой из белого шоколада
         </a>
-        <button class="btn">Быстрый просмотр</button>
+        <button class="btn" type="button">Быстрый просмотр</button>
       </div>
 
       <div class="shopping-card">
@@ -169,7 +171,7 @@
         <p class="shopping-card__cost">415 руб.</p>
         <a href="#">Сливочное крем-брюле с карамельной подливкой
         </a>
-        <button class="btn">Быстрый просмотр</button>
+        <button class="btn" type="button">Быстрый просмотр</button>
       </div>
 
     </section>
@@ -192,9 +194,9 @@
     </section>
 
 
-    <article class="blog__post">
+    <article class="blog-post">
       <b>В нашем новом блоге</b>
-      <a href="#" class="blog__post-link">10 способов сервировки фруктовых щербетов к столу
+      <a href="#" class="blog-post__link">10 способов сервировки фруктовых щербетов к столу
       </a>
     </article>
 
@@ -202,11 +204,13 @@
     <section class="subscribe">
       <p class="subscribe">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не
         спамить и не слать всякой ненужной ерунды. Честно =)
-        <div class="field-text">
-          <label class="field-text__label" for="subscribe-email">Это пустой лэйбл, который полоен по БЭМ</label>
-          <input class="field-text__input" id="subscribe-email" type="email" placeholder="Электронная почта">
-        </div>
-        <button class="btn" type="submit">Отправить</button>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru">
+          <div class="field-text">
+            <label class="field-text__label visually-hidden" for="subscribe-email">Электронная почта для оформления подписки</label>
+            <input class="field-text__input" id="subscribe-email" type="email" placeholder="Электронная почта">
+          </div>
+          <button class="btn" type="submit">Отправить</button>
+        </form>
       </p>
     </section>
 
@@ -281,25 +285,25 @@
     <div class="get-in-touch">
       <b>Мы обязательно вам ответим!</b>
 
-      <form class="get-in-touch-form" method="POST">
+      <form class="get-in-touch-form" action="https://echo.htmlacademy.ru">
 
         <div class="field-text">
-          <label class="field-text__label" for="get-in-touch-name">Это пустой лэйбл, который положен по БЭМ</label>
+          <label class="field-text__label visually-hidden" for="get-in-touch-name">Как вас зовут?</label>
           <input class="field-text__input" id="get-in-touch-name" type="text" placeholder="Как вас зовут?">
         </div>
 
         <div class="field-text">
-          <label class="field-text__label" for="get-in-touch-email">Это пустой лэйбл, который положен по БЭМ</label>
+          <label class="field-text__label visually-hidden" for="get-in-touch-email">Ваша почта для ответа?</label>
           <input class="field-text__input" id="get-in-touch-email" type="email" placeholder="Ваша почта для ответа?">
         </div>
 
-        <textarea class="field-textarea" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
+        <textarea class="field-textarea" cols="30" rows="10" placeholder="Напишите что-нибудь..." aria-label="Поле для текста письма"></textarea>
 
         <button class="btn" type="submit">Отправить</button>
 
       </form>
 
-      <span class="close-modal">&times;</span>
+      <button class="close-modal" type="button" aria-label="Закрыт окно обратной связи">&times;</button>
     </div>
   </section>
 
