@@ -10,11 +10,11 @@
 
 <body>
   <header class="main-header">
-    <a href="index.html" class="main-logo">
+    <a href="index.html" class="main-logo" aria-label="Ссылка на главную страницу">
       <img src="img/gllacy-logo.svg" width="154px" height="64px" alt="Gllacy logo" class="main-logo__img">
     </a>
-    <ul class="main-menu">
-      <li class="main-menu__item main-menu__item--active">
+    <ul class="main-menu" aria-label="Навигация по сайту" tabindex="0">
+      <li class="main-menu__item">
         <a href="catalog.html">Каталог</a>
         <ul class="main-submenu">
           <li class="main-submenu__item main-submenu__item--lead">
@@ -41,13 +41,38 @@
         <a href="#">О компании</a>
       </li>
     </ul>
+    <ul class="user-bar" aria-label="Пользовательское меню" tabindex="0">
+      <li class="user-bar__item">[Search]
+        <form class="search-form" action="https://echo.htmlacademy.ru">
+          <div class="field-text">
+            <label class="field-text__label visually-hidden" for="user-bar-search">Поиск по сайту</label>
+            <input class="field-text__input" id="user-bar-search" type="search" name="search" placeholder="Что ищем?">
+          </div>
+        </form>
+      </li>
 
-    <ul class="user-bar">
-      <li class="user-bar__item">[Search]</li>
-      <li class="user-bar__item">Вход</li>
-      <li class="user-bar__item">
+      <li class="user-bar__item">Вход
+        <form class="sign-up-form" action="https://echo.htmlacademy.ru">
+
+          <div class="field-text">
+            <label class="field-text__label visually-hidden" for="sign-up-form-name">Электронная почта для входа на сайт</label>
+            <input class="field-text__input" id="sign-up-form-name" type="email" name="user" placeholder="Электронная почта">
+          </div>
+
+          <div class="field-text">
+            <label class="field-text__label visually-hidden" for="sign-up-form-pass">Пароль для входа на сайт</label>
+            <input class="field-text__input" id="sign-up-form-pass" type="password" name="password" placeholder="Пароль">
+          </div>
+
+          <button class="btn" type="submit">Войти</button>
+
+          <a href="#">Забыли пароль?</a>
+          <a href="#">Новая регистрация</a>
+        </form>
+      </li>
+      <li class="user-bar__item" aria-label="Список заказов: товаров 2" tabindex="0">
         [Basket--active] 2 товара
-        <div class="order">
+        <div class="order" aria-label="Карточка товаров" tabindex="0">
           <ul class="order__order-list order-list">
             <li class="order-list__order-item order-item">
               <button class="order-item__remove" aria-label="Удалить товар из списка заказа">&times;</button>
@@ -77,9 +102,9 @@
     </ul>
 
 
-    <p class="schedule">С 10 до 20, ежедневно
+    <p class="schedule" aria-label="Режим работы" tabindex="0">С 10 до 20, ежедневно
       <br>
-      <a href="tel:+78214502525">8 812 450-25-25</a>
+      <a href="tel:+78214502525" aria-label="Позвоните нам по этому телефону">8 812 450-25-25</a>
     </p>
   </header>
 
@@ -95,7 +120,7 @@
 
     <h1>Сливочное мороженое</h1>
 
-    <form class="settings" method="GET" action="https://echo.htmlacademy.ru">
+    <form class="settings" method="GET" action="https://echo.htmlacademy.ru" aria-label="Настроить фильтрацию товаров">
 
       <div class="settings__field-select field-select">
         <label class="field-select__label" for="sort">Сортировка:</label>
@@ -158,7 +183,7 @@
         </div>
       </fieldset>
 
-      <button class="settings__btn" type="submit">Применить</button>
+      <button class="settings__btn" type="submit" aria-label="Применить фильтры">Применить</button>
 
     </form>
 
@@ -251,34 +276,36 @@
 
     </section>
 
-    <p class="catalog-pagination">
-      <a href="#" class="catalog-pagination__item catalog-pagination__item--disabled">[&lAarr;;]</a>
-      <a href="#" class="catalog-pagination__item catalog-pagination__item--current">1</a>
-      <a href="#" class="catalog-pagination__item">2</a>
-      <a href="#" class="catalog-pagination__item">3</a>
-      <a href="#" class="catalog-pagination__item">4</a>
-      <a href="#" class="catalog-pagination__item">5</a>
-      <a href="#" class="catalog-pagination__item">[&rAarr;]</a>
+    <p class="catalog-pagination" aria-label="Навигация по страницам каталога" tabindex="0">
+      <a href="#" class="catalog-pagination__item catalog-pagination__item--disabled" aria-label="Перейти на предыдущую страницу">[&lAarr;;]</a>
+      <a href="#" class="catalog-pagination__item catalog-pagination__item--current" aria-label="Вы находитесь на странице 1">1</a>
+      <a href="#" class="catalog-pagination__item" aria-label="Перейти на страницу 2">2</a>
+      <a href="#" class="catalog-pagination__item" aria-label="Перейти на страницу 3">3</a>
+      <a href="#" class="catalog-pagination__item" aria-label="Перейти на страницу 4">4</a>
+      <a href="#" class="catalog-pagination__item" aria-label="Перейти на страницу 5">5</a>
+      <a href="#" class="catalog-pagination__item" aria-label="Перейти на следующую страницу">[&rAarr;]</a>
     </p>
 
   </main>
 
   <footer class="main-footer">
-    <ul class="socials">
+
+    <ul class="socials" aria-label="Gllacy в социальных сетях" tabindex="0">
       <li class="socials__item">
-        <a href="#">TW</a>
+        <a href="#" aria-label="Мы в Twitter">TW</a>
       </li>
       <li class="socials__item">
-        <a href="#">IG</a>
+        <a href="#" aria-label="Мы в Instagram">IG</a>
       </li>
       <li class="socials__item">
-        <a href="#">FB</a>
+        <a href="#" aria-label="Мы на Facebook">FB</a>
       </li>
       <li class="socials__item">
-        <a href="#">VK</a>
+        <a href="#" aria-label="Мы в Контакте">VK</a>
       </li>
     </ul>
-    <ul class="doc-links">
+
+    <ul class="doc-links" aria-label="Здесь ссылки на информацию, которая может быть вам полезна" tabindex="0">
       <li class="doc-links__item">
         <a href="#">Для поставщиков</a>
       </li>
@@ -292,13 +319,15 @@
         <a href="#">Экологические стандарты</a>
       </li>
     </ul>
+
     <p class="copyright">
       <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/htmlacademy-logo.svg" width="108" height="39" alt="HTML Academy logo">
+        <img src="img/htmlacademy-logo.svg" width="125" height="39" alt="HTML Academy logo">
       </a>
       <br> Сделано в
       <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017
     </p>
+
   </footer>
 
 </body>

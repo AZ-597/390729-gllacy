@@ -13,7 +13,7 @@
     <a href="#" class="main-logo">
       <img src="img/gllacy-logo.svg" width="154" height="64" alt="Gllacy logo" class="main-logo__img">
     </a>
-    <ul class="main-menu">
+    <ul class="main-menu" aria-label="Навигация по сайту" tabindex="0">
       <li class="main-menu__item">
         <a href="catalog.html">Каталог</a>
         <ul class="main-submenu">
@@ -41,7 +41,7 @@
         <a href="#">О компании</a>
       </li>
     </ul>
-    <ul class="user-bar">
+    <ul class="user-bar" aria-label="Пользовательское меню" tabindex="0">
       <li class="user-bar__item">[Search]
         <form class="search-form" action="https://echo.htmlacademy.ru">
           <div class="field-text">
@@ -71,14 +71,14 @@
         </form>
       </li>
 
-      <li class="user-bar__item">[Basket]
+      <li class="user-bar__item" aria-label="Список заказов пуст" tabindex="0">[Basket]
         <span>Пусто</span>
       </li>
     </ul>
 
-    <p class="schedule">С 10 до 20, ежедневно
+    <p class="schedule" aria-label="Режим работы" tabindex="0">С 10 до 20, ежедневно
       <br>
-      <a href="tel:+78214502525">8 812 450-25-25</a>
+      <a href="tel:+78214502525" aria-label="Позвоните нам по этому телефону">8 812 450-25-25</a>
     </p>
 
   </header>
@@ -88,20 +88,20 @@
 
     <div class="carousel__slide">
       <img src="img/slider/slide-1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом" class="slide__image">
-      <strong class="slide__lead">Крем-брюле и пломбир с малиновым джемом</strong>
+      <strong class="slide__lead" tabindex="0">Крем-брюле и пломбир с малиновым джемом</strong>
     </div>
 
     <div class="carousel__slide">
       <img src="img/slider/slide-2.png" width="1045" height="881" alt="Шоколадный пломбир и лимонный сорбет" class="slide__image">
-      <strong class="slide__lead">Шоколадный пломбир и лимонный сорбет</strong>
+      <strong class="slide__lead" tabindex="0">Шоколадный пломбир и лимонный сорбет</strong>
     </div>
 
     <div class="carousel__slide">
       <img src="img/slider/slide-3.png" width="1045" height="881" alt="Пломбир с помадкой и клубничный щербет" class="slide__image">
-      <strong class="slide__lead">Пломбир с помадкой и клубничный щербет</strong>
+      <strong class="slide__lead" tabindex="0">Пломбир с помадкой и клубничный щербет</strong>
     </div>
 
-    <button class="btn btn--big">Давайте оба!</button>
+    <button class="btn btn--big" aria-label="Добавить в корзину это предложение">Давайте оба!</button>
 
     <ul class="carousel__pagination">
       <li class="carousel__pagination-btn">[O]</li>
@@ -119,22 +119,22 @@
 
       <div class="promo-case">
         <b class="promo-case__slogan">Малинка даром!</b>
-        <p class="promo-case__lead">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
+        <p class="promo-case__lead" tabindex="0">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
         </p>
-        <button class="btn">Хочу варенья!</button>
+        <button class="btn" aria-label="Добавить в корзину это предложение">Хочу варенья!</button>
       </div>
 
       <div class="promo-case">
         <b class="promo-case__slogan">Шоколадки даром!</b>
-        <p class="promo-case__lead">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
+        <p class="promo-case__lead" tabindex="0">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
         </p>
-        <button class="btn">Хочу шоколадки!</button>
+        <button class="btn" aria-label="Добавить в корзину это предложение">Хочу шоколадки!</button>
       </div>
 
     </section>
 
 
-    <section class="popular">
+    <section class="popular" aria-label="Популярные товары" tabindex="0">
 
       <h2 class="visually-hidden">Хит-парад</h2>
 
@@ -223,12 +223,12 @@
 
       <article class="contact">
         <small>Адрес главного офиса и офлайн-магазина:</small>
-        <address>
+        <address aria-label="Наш адрес и телефон">
           <b>ул. Большая Конюшенная
             <br> 19/8, Санкт-Петербург</b>
         </address>
         <small>Для заказов по телефону:</small>
-        <b>8 812 450-25-25</b>
+        <b><a href="tel:+78214502525" aria-label="Позвоните нам по этому телефону">8 812 450-25-25</a></b>
         <small>(с 10 до 20 ежедневно)</small>
         <button class="btn">Форма обратной связи</button>
       </article>
@@ -240,22 +240,22 @@
 
   <footer class="main-footer">
 
-    <ul class="socials">
+    <ul class="socials" aria-label="Gllacy в социальных сетях" tabindex="0">
       <li class="socials__item">
-        <a href="#">TW</a>
+        <a href="#" aria-label="Мы в Twitter">TW</a>
       </li>
       <li class="socials__item">
-        <a href="#">IG</a>
+        <a href="#" aria-label="Мы в Instagram">IG</a>
       </li>
       <li class="socials__item">
-        <a href="#">FB</a>
+        <a href="#" aria-label="Мы на Facebook">FB</a>
       </li>
       <li class="socials__item">
-        <a href="#">VK</a>
+        <a href="#" aria-label="Мы в Контакте">VK</a>
       </li>
     </ul>
 
-    <ul class="doc-links">
+    <ul class="doc-links" aria-label="Здесь ссылки на информацию, которая может быть вам полезна" tabindex="0">
       <li class="doc-links__item">
         <a href="#">Для поставщиков</a>
       </li>
@@ -282,7 +282,7 @@
 
 
   <section class="modal">
-    <div class="get-in-touch">
+    <div class="get-in-touch" aria-label="Форма для связи с нами" tabindex="0">
       <b>Мы обязательно вам ответим!</b>
 
       <form class="get-in-touch-form" action="https://echo.htmlacademy.ru">
@@ -303,7 +303,7 @@
 
       </form>
 
-      <button class="close-modal" type="button" aria-label="Закрыт окно обратной связи">&times;</button>
+      <button class="close-modal" type="button" aria-label="Закрыть окно обратной связи">&times;</button>
     </div>
   </section>
 
