@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-
 :root {
-  font-family: 'Roboto', sans-serif;
+  font: 400 16px / 22px 'Roboto', Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
 }
 
-* {
+*,
+*::before,
+*::after {
   font-family: inherit;
+  box-sizing: inherit;
 }
 
 .visually-hidden {
@@ -16,6 +18,707 @@
   margin: -1px;
 }
 
+/* ₽ символ рубля - чтоб не потерять :)) */
+
 body {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
   background: rgb(132, 157, 143);
+}
+
+.page-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  min-width: 900px;
+  max-width: 1200px;
+  outline: 1px dashed pink;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-self: stretch;
+  outline: 1px dashed crimson;
+}
+
+.flex-row>* {
+  margin-right: 2.2%;
+}
+
+.flex-row>*:first-child {
+  margin-left: 2.3%;
+}
+
+.flex-row>*:last-child {
+  margin-right: 2.3%;
+}
+
+/* ------------------ #Buttons ------------------ */
+
+.btn {
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 32px;
+  background: linear-gradient(to top, #e72f35, #f26843);
+  height: 44px;
+  padding: 0 24px;
+  font-size: 18px;
+  text-shadow: none;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.54);
+}
+
+.btn:hover {
+  background: linear-gradient(to top, rgba(231, 47, 53, 0.8), rgba(242, 104, 67, 0.8)), white;
+  box-shadow: 0 1px 2px #ac1000;
+}
+
+.btn:focus {
+  /* Добавить красивостей */
+}
+
+.btn:active {
+  background: linear-gradient(to top, rgba(231, 47, 53, 0.93), rgba(242, 104, 67, 0.93)), black;
+  box-shadow: inset 0 1px 2px #952718;
+  color: #fceeec;
+}
+
+.btn--big {
+  height: 64px;
+  padding: 0 40px;
+  font-size: 32px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+}
+
+.btn--big:hover {
+  box-shadow: 0 2px 2px #ac1000;
+}
+
+.btn--big:active {
+  box-shadow: inset 0 2px 2px #952718;
+}
+
+/* ------------------ #Inputs ------------------ */
+
+.field-text__input,
+.field-textarea {
+  padding: 0 10px;
+  height: 44px;
+  box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.52);
+  border-width: 0;
+  border-radius: 5px;
+  background-color: white;
+  font-weight: 700;
+  font-size: 16px;
+  color: #323232;
+}
+
+.field-text__input:hover,
+.field-textarea:hover {
+  box-shadow: inset 0 0 0 2px rgba(154, 154, 154, 0.52);
+}
+
+.field-text__input:focus,
+.field-textarea:focus {
+  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.52);
+  outline: none;
+}
+
+.field-text__input:focus::-webkit-input-placeholder,
+.field-textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.field-text__input:focus::-ms-input-placeholder,
+.field-textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.field-text__input:focus:-ms-input-placeholder,
+.field-textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.field-text__input:focus::placeholder,
+.field-textarea:focus::placeholder {
+  color: transparent;
+}
+
+.field-text__input::-webkit-input-placeholder,
+.field-textarea::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #999999;
+}
+
+.field-text__input::-ms-input-placeholder,
+.field-textarea::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #999999;
+}
+
+.field-text__input:-ms-input-placeholder,
+.field-textarea:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #999999;
+}
+
+.field-text__input::placeholder,
+.field-textarea::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #999999;
+}
+
+/* весь этот адский кошмар с префиксами в 4 наката потому что есл их все собрать вместе, то не рабоатет ничего совсем :((( */
+
+.field-textarea {
+  padding-top: 10px;
+  resize: none;
+  width: 100%;
+  min-height: 155px;
+  /*  max-height: 50vh; */
+}
+
+/* ------------------ #Anchors ------------------ */
+
+a {
+  color: white;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #ffbc9e;
+  font-weight: 500;
+}
+
+a:active {
+  color: #ffbc9e;
+  font-weight: 500;
+}
+
+/* ------------------ #Layout ------------------ */
+
+.main-header {
+  justify-content: flex-start;
+}
+
+.user-bar {
+  margin-left: auto;
+}
+
+/* ------------------ #Schedule ------------------ */
+
+.schedule {
+  margin-right: 2.3%;
+  align-self: flex-end;
+  text-align: right;
+  color: white;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.schedule a {
+  color: white;
+  font-size: 22px;
+  line-height: 24px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ------------------ #Promo ------------------ */
+
+.promo {
+  margin-bottom: 40px;
+}
+
+.promo-case {
+  flex-basis: 46.6%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  padding: 20px;
+  height: 230px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+}
+
+.promo-case__slogan {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.promo-case__lead {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.promo-case:first-of-type {
+  margin-left: 2.3%;
+  background-image: url('/img/bg/raspberries-bg.jpg');
+  background-position: center center;
+  background-color: crimson;
+}
+
+.promo-case:last-of-type {
+  background-image: url('/img/bg/chocolate-bg.jpg');
+  background-position: center center;
+  background-color: brown;
+}
+
+.promo-case .btn {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+/* ------------------ #Shopping-card ------------------ */
+
+.shopping-card {
+  flex-basis: 22.2%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 8px;
+  text-align: center;
+  outline: 1px dashed blueviolet;
+}
+
+.popular .shopping-card:first-of-type {
+  margin-left: 2.3%;
+}
+
+.shopping-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.shopping-card__schild-hit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 61px;
+  height: 61px;
+  background: url('/img/hit-shield.svg');
+}
+
+.shopping-card__img {
+  align-self: stretch;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background: rebeccapurple;
+  border-radius: 300px;
+  margin-bottom: 10px;
+}
+
+.shopping-card__cost {
+  position: absolute;
+  left: 0;
+  top: 170px;
+  align-self: flex-start;
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.shopping-card__cost::after {
+  content: "/кг";
+  font-size: 30px;
+}
+
+.shopping-card .btn {
+  display: none;
+}
+
+.shopping-card:hover .btn {
+  display: block;
+  margin-top: 16px;
+}
+
+/* ------------------ #Advantages ------------------ */
+
+.advantages {
+  margin-left: 2.3%;
+  margin-right: 2.3%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border: none;
+  border-radius: 10px;
+  padding: 18px;
+  background-image: url('/img/bg/waffle-pattern.jpg');
+}
+
+.advantages__title {
+  flex-basis: 100%;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb( 50, 50, 50);
+  line-height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.advantages__item {
+  position: relative;
+  margin-left: 56px;
+  margin-bottom: 10px;
+  flex-basis: 41%;
+  color: rgb( 50, 50, 50);
+}
+
+.advantages__item:nth-child(odd) {
+  margin-right: 2.2%;
+}
+
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -56px;
+  display: block;
+  width: 49px;
+  height: 49px;
+  border-radius: 50px;
+}
+
+.advantages__item:nth-of-type(1)::before {
+  background-image: url('/img/advantages/ice-cream-icon.svg');
+}
+
+.advantages__item:nth-of-type(2)::before {
+  background-image: url('/img/advantages/cow-icon.svg');
+}
+
+.advantages__item:nth-of-type(3)::before {
+  background-image: url('/img/advantages/leaf-icon.svg');
+}
+
+.advantages__item:nth-of-type(4)::before {
+  background-image: url('/img/advantages/your-eyes-cold-as-ice-icon-lalala.svg');
+}
+
+/* ------------------ #Blog ------------------ */
+
+.blog-post {
+  flex-basis: 46.6%;
+  justify-self: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  background-color: bisque;
+  height: 220px;
+  padding: 20px;
+  border-radius: 10px;
+  color: #323232;
+  background: url("/img/bg/strawberry-bg.jpg"), white;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: 120% 10%;
+}
+
+.blog-post b {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.blog-post__link {
+  display: inline-block;
+  max-width: 60%;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #323232;
+}
+
+/* должен быть насыщенный цвет при наведении */
+
+/* ------------------ #Subscribe ------------------ */
+
+.subscribe {
+  flex-basis: 46.6%;
+  justify-self: flex-end;
+  background-color: cornflowerblue;
+  height: 220px;
+  padding: 6px;
+  background-image: repeating-linear-gradient( -45deg, transparent, transparent 7px, rgb(254, 158, 144) 7px, rgb(254, 158, 144) 14px, transparent 14px, transparent 21px, rgb(146, 205, 255) 21px, rgb(146, 205, 255) 28px);
+  background-color: rgb(248, 247, 244);
+  border: none;
+  border-radius: 10px;
+}
+
+.subscribe-inner {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgb(248, 247, 244);
+  border-radius: 10px;
+}
+
+.subscribe-inner p {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  color: rgb(90, 90, 90);
+}
+
+.subscribe-form {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.subscribe-form .field-text {
+  flex-basis: 100%;
+  margin-right: 10px;
+}
+
+.subscribe-form .field-text__input {
+  width: 100%;
+}
+
+/* ------------------ #Map ------------------ */
+
+.map {
+  position: relative;
+  margin-top: 40px;
+  height: 430px;
+  background-image: url("img/bg/map-raster-image.jpg");
+  outline: 1px dashed aqua;
+}
+
+/* ------------------ #Contact ------------------ */
+
+.contact {
+  align-self: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 25px;
+  position: absolute;
+  top: 15%;
+  right: 2.3%;
+  border-radius: 15px;
+  background-color: white;
+  width: 303px;
+  height: 70%;
+}
+
+.contact small {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contact address {
+  font-style: normal;
+  margin-bottom: 25px;
+}
+
+.contact b {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contact a {
+  font-size: 18px;
+  line-height: 22px;
+  color: black;
+  text-decoration: none;
+}
+
+.contact .btn {
+  margin-top: 25px;
+}
+
+/* ------------------ #Footer ------------------ */
+
+.main-footer {
+  align-items: center;
+  height: 104px;
+}
+
+/* ------------------ #Socials ------------------ */
+
+.socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.socials__item {
+  display: inline-flex;
+  margin-right: 16px;
+}
+
+.socials__item a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 32px 32px;
+  border: none;
+  border-radius: 32px;
+  opacity: .8;
+  box-shadow: 0 0 0 3px rgba( 255, 255, 255, .5);
+}
+
+.socials__item a[href*="twitter.com"] {
+  background-image: url("/img/socials/twitter-icon.svg");
+}
+
+.socials__item a[href*="instagram.com"] {
+  background-image: url("/img/socials/instagram-icon.svg");
+}
+
+.socials__item a[href*="facebook.com"] {
+  background-image: url("/img/socials/facebook-icon.svg");
+}
+
+.socials__item a[href*="vk.com"] {
+  background-image: url("/img/socials/vkontakte-icon.svg");
+}
+
+.socials__item a:hover {
+  opacity: 1;
+  box-shadow: 0 0 0 3px rgba( 255, 255, 255, .7);
+}
+
+.socials__item a:active {
+  opacity: .8;
+  box-shadow: 0 0 0 3px rgba( 255, 255, 255, .7);
+}
+
+/* ------------------ #Doc-links ------------------ */
+
+.doc-links {
+  flex-basis: 35%;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  height: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.doc-links__item {
+  position: relative;
+  margin-right: 2rem;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.doc-links__item a {
+  font-weight: 400;
+}
+
+.doc-links__item:first-child a {
+  font-weight: 700;
+}
+
+.doc-links__item:first-child::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -24px;
+  content: "";
+  width: 19px;
+  height: 19px;
+  background-image: url("/img/heart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px 13px;
+}
+
+/* ------------------ #Copyright ------------------ */
+
+.copyright {
+  font-size: 12px;
+  line-height: 18px;
+  color: white;
+}
+
+.copyright a {
+  font-weight: 400;
+}
+
+/* ------------------ #Modal, #Get-in-touch ------------------ */
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  /* flex */
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+
+.get-in-touch {
+  position: relative;
+  align-self: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #f8f7f4;
+  padding: 24px;
+  border: none;
+  border-radius: 10px;
+  width: 478px;
+}
+
+.get-in-touch b {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.get-in-touch-form {
+  align-self: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.get-in-touch-form .btn {
+  align-self: flex-end;
+}
+
+.get-in-touch-form *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.get-in-touch-form .field-text__input {
+  width: 267px;
+}
+
+.get-in-touch .close-modal {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  font-size: 40px;
+  background-image: url("/img/x-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
 }
