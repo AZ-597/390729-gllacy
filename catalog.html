@@ -104,85 +104,90 @@
       </ul>
     </header>
 
-    <p class="schedule" aria-label="Режим работы" tabindex="0">С 10 до 20, ежедневно
-      <br>
-      <a href="tel:+78214502525" aria-label="Позвоните нам по этому телефону">8 812 450-25-25</a>
-    </p>
-
-    <main>
-
-      <p class="main-breadcrumbs flex-row">
+    <div class="flex-row">
+      <p class="breadcrumbs">
         <a href="#">Главная</a>
         <a href="#">Каталог</a>
         <a href="#">Сливочное</a>
       </p>
 
-      <h1>Сливочное мороженое</h1>
+      <p class="schedule" aria-label="Режим работы" tabindex="0">С 10 до 20, ежедневно
+        <br>
+        <a href="tel:+78214502525" aria-label="Позвоните нам по этому телефону">8 812 450-25-25</a>
+      </p>
+    </div>
 
-      <form class="settings flex-row" method="GET" action="https://echo.htmlacademy.ru" aria-label="Настроить фильтрацию товаров">
+    <main>
+      <h1 class="catalog-header">Сливочное мороженое</h1>
 
-        <div class="settings__field-select field-select">
-          <label class="field-select__label" for="sort">Сортировка:</label>
-          <select class="field-select__select" id="sort" name="sorting">
-            <option value="byPopular">по популярности</option>
-            <option value="inexpensiveFirst">сначала недорогие</option>
-            <option value="expensiveFirst">сначала дорогие</option>
-            <option value="byFatContent">по жирности</option>
-          </select>
+      <form class="settings" method="GET" action="https://echo.htmlacademy.ru" aria-label="Настроить фильтрацию товаров">
+
+        <div class="flex-row">
+          <div class="settings__field-select field-select">
+            <label class="field-select__label" for="sort">Сортировка:</label>
+            <select class="field-select__select" id="sort" name="sorting">
+              <option value="byPopular">по популярности</option>
+              <option value="inexpensiveFirst">сначала недорогие</option>
+              <option value="expensiveFirst">сначала дорогие</option>
+              <option value="byFatContent">по жирности</option>
+            </select>
+          </div>
+
+          <div class="settings__field-range field-range">
+            <label class="field-range__label" for="price-range">Цена:</label>
+            <input class="field-range__range" id="price-range" type="range" name="price-range" min="100" max="1000" value="500">
+          </div>
+
+          <fieldset class="settings__fieldset" id="fat-content">
+            <legend class="settings__legend">Жирность:</legend>
+
+            <div class="settings__fieldset-radio field-radio">
+              <input class="field-radio__input" type="radio" name="fat-value" id="fat-zero" value="zero">
+              <label class="field-radio__label" for="fat-zero">0%</label>
+            </div>
+            <div class="settings__fieldset-radio field-radio">
+              <input class="field-radio__input" type="radio" name="fat-value" id="fat-below10" value="below10">
+              <label class="field-radio__label" for="fat-below10">до 10%</label>
+            </div>
+            <div class="settings__fieldset-radio field-radio">
+              <input class="field-radio__input" type="radio" name="fat-value" id="fat-below30" value="below30">
+              <label class="field-radio__label" for="fat-below30">до 30%</label>
+            </div>
+            <div class="settings__fieldset-radio field-radio">
+              <input class="field-radio__input" type="radio" name="fat-value" id="fat-above30" value="above30">
+              <label class="field-radio__label" for="fat-above30">выше 30%</label>
+            </div>
+          </fieldset>
         </div>
 
-        <div class="settings__field-range field-range">
-          <label class="field-range__label" for="price-range">Цена:</label>
-          <input class="field-range__range" id="price-range" type="range" name="price-range" min="100" max="1000" value="500">
+        <div class="flex-row">
+          <fieldset class="settings__fieldset" id="toppings">
+            <legend class="settings__legend">Наполнители:</legend>
+
+            <div class="settings__fieldset-checkbox field-checkbox">
+              <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-chocolate" value="chocolate">
+              <label class="field-checkbox__label" for="topping-chocolate">шоколадные</label>
+            </div>
+            <div class="settings__fieldset-checkbox field-checkbox">
+              <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-sugar" value="sugar">
+              <label class="field-checkbox__label" for="topping-sugar">сахарные присыпки</label>
+            </div>
+            <div class="settings__fieldset-checkbox field-checkbox">
+              <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-fruit" value="fruit">
+              <label class="field-checkbox__label" for="topping-fruit">фрукты</label>
+            </div>
+            <div class="settings__fieldset-checkbox field-checkbox">
+              <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-syrup" value="syrup">
+              <label class="field-checkbox__label" for="topping-syrup">сиропы</label>
+            </div>
+            <div class="settings__fieldset-checkbox field-checkbox">
+              <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-jam" value="jam">
+              <label class="field-checkbox__label" for="topping-jam">джемы</label>
+            </div>
+          </fieldset>
+
+          <button class="settings__btn" type="submit" aria-label="Применить фильтры">Применить</button>
         </div>
-
-        <fieldset class="settings__fieldset" id="fat-content">
-          <legend class="settings__legend">Жирность:</legend>
-
-          <div class="settings__fieldset-radio field-radio">
-            <input class="field-radio__input" type="radio" name="fat-value" id="fat-zero" value="zero">
-            <label class="field-radio__label" for="fat-zero">0%</label>
-          </div>
-          <div class="settings__fieldset-radio field-radio">
-            <input class="field-radio__input" type="radio" name="fat-value" id="fat-below10" value="below10">
-            <label class="field-radio__label" for="fat-below10">до 10%</label>
-          </div>
-          <div class="settings__fieldset-radio field-radio">
-            <input class="field-radio__input" type="radio" name="fat-value" id="fat-below30" value="below30">
-            <label class="field-radio__label" for="fat-below30">до 30%</label>
-          </div>
-          <div class="settings__fieldset-radio field-radio">
-            <input class="field-radio__input" type="radio" name="fat-value" id="fat-above30" value="above30">
-            <label class="field-radio__label" for="fat-above30">выше 30%</label>
-          </div>
-        </fieldset>
-
-        <fieldset class="settings__fieldset" id="toppings">
-          <legend class="settings__legend">Наполнители:</legend>
-
-          <div class="settings__fieldset-checkbox field-checkbox">
-            <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-chocolate" value="chocolate">
-            <label class="field-checkbox__label" for="topping-chocolate">шоколадные</label>
-          </div>
-          <div class="settings__fieldset-checkbox field-checkbox">
-            <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-sugar" value="sugar">
-            <label class="field-checkbox__label" for="topping-sugar">сахарные присыпки</label>
-          </div>
-          <div class="settings__fieldset-checkbox field-checkbox">
-            <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-fruit" value="fruit">
-            <label class="field-checkbox__label" for="topping-fruit">фрукты</label>
-          </div>
-          <div class="settings__fieldset-checkbox field-checkbox">
-            <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-syrup" value="syrup">
-            <label class="field-checkbox__label" for="topping-syrup">сиропы</label>
-          </div>
-          <div class="settings__fieldset-checkbox field-checkbox">
-            <input class="field-checkbox__input" type="checkbox" name="topping" id="topping-jam" value="jam">
-            <label class="field-checkbox__label" for="topping-jam">джемы</label>
-          </div>
-        </fieldset>
-
-        <button class="settings__btn" type="submit" aria-label="Применить фильтры">Применить</button>
 
       </form>
 

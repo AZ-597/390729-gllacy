@@ -20,6 +20,8 @@
 
 /* ₽ символ рубля - чтоб не потерять :)) */
 
+/* Исправить высоту везде в блоках на min-height */
+
 body {
   display: flex;
   flex-flow: row nowrap;
@@ -53,6 +55,17 @@ body {
 
 .flex-row>*:last-child {
   margin-right: 2.3%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+  margin: 0;
+  line-height: 1.2;
 }
 
 /* ------------------ #Buttons ------------------ */
@@ -212,6 +225,37 @@ a:active {
   margin-left: auto;
 }
 
+/* ------------------ #Breadcrumbs ------------------ */
+
+.catalog-header {
+  margin-left: 2.3%;
+}
+
+/* ------------------ #Breadcrumbs ------------------ */
+
+.breadcrumbs {
+  margin: 28px auto;
+  outline: 1px dashed lightseagreen;
+  align-self: flex-end;
+}
+
+.breadcrumbs a {
+  display: inline-block;
+  font-weight: 400;
+}
+
+.breadcrumbs a:last-of-type {
+  text-decoration: none;
+}
+
+.breadcrumbs a:not(:last-of-type):after {
+  content: "»";
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
 /* ------------------ #Schedule ------------------ */
 
 .schedule {
@@ -244,7 +288,7 @@ a:active {
   flex-flow: column nowrap;
   justify-content: flex-start;
   padding: 20px;
-  height: 230px;
+  min-height: 230px;
   border-radius: 10px;
   color: white;
   font-weight: 700;
@@ -290,10 +334,6 @@ a:active {
   border-radius: 8px;
   text-align: center;
   outline: 1px dashed blueviolet;
-}
-
-.popular .shopping-card:first-of-type {
-  margin-left: 2.3%;
 }
 
 .shopping-card:hover {
@@ -418,7 +458,7 @@ a:active {
   flex-flow: column nowrap;
   justify-content: flex-start;
   background-color: bisque;
-  height: 220px;
+  min-height: 220px;
   padding: 20px;
   border-radius: 10px;
   color: #323232;
@@ -450,7 +490,7 @@ a:active {
   flex-basis: 46.6%;
   justify-self: flex-end;
   background-color: cornflowerblue;
-  height: 220px;
+  min-height: 220px;
   padding: 6px;
   background-image: repeating-linear-gradient( -45deg, transparent, transparent 7px, rgb(254, 158, 144) 7px, rgb(254, 158, 144) 14px, transparent 14px, transparent 21px, rgb(146, 205, 255) 21px, rgb(146, 205, 255) 28px);
   background-color: rgb(248, 247, 244);
@@ -491,7 +531,7 @@ a:active {
 .map {
   position: relative;
   margin-top: 40px;
-  height: 430px;
+  min-height: 430px;
   background-image: url("img/bg/map-raster-image.jpg");
   outline: 1px dashed aqua;
 }
@@ -542,8 +582,8 @@ a:active {
 /* ------------------ #Footer ------------------ */
 
 .main-footer {
-  align-items: center;
-  height: 104px;
+  align-items: flex-end;
+  min-height: 100px;
 }
 
 /* ------------------ #Socials ------------------ */
@@ -551,6 +591,7 @@ a:active {
 .socials {
   list-style: none;
   margin: 0;
+  margin-bottom: 28px;
   padding: 0;
 }
 
@@ -608,6 +649,7 @@ a:active {
   height: 3rem;
   list-style: none;
   margin: 0;
+  margin-bottom: 18px;
   padding: 0;
 }
 
@@ -646,6 +688,8 @@ a:active {
   font-size: 12px;
   line-height: 18px;
   color: white;
+  margin-top: 0;
+  margin-bottom: 28px;
 }
 
 .copyright a {
@@ -721,4 +765,173 @@ a:active {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center center;
+}
+
+/* ------------------ #Settings ------------------ */
+
+.settings {
+  margin-top: 30px;
+}
+
+.settings .flex-row {
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 62px;
+}
+
+.settings__fieldset {
+  position: relative;
+  border: none;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, .2);
+  padding: 0 15px;
+  padding-top: 8px;
+  margin: 0;
+  margin-right: 14px;
+  height: 37px;
+}
+
+.settings__fieldset-radio,
+.settings__fieldset-checkbox {
+  display: inline-flex;
+}
+
+.field-select__label,
+.field-range__label,
+.settings__legend {
+  display: block;
+  margin-left: 12px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: white;
+}
+
+.settings__legend {
+  position: absolute;
+  top:-20px;
+  left:15px;
+  margin-left: 0;
+}
+
+/* ------------------ #Settings-#Select ------------------ */
+
+.field-select__select {
+  padding: 0 15px;
+  width: 200px;
+  height: 37px;
+  font-weight: 500;
+  border: none;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, .2);
+  color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.field-select__select::-ms-expand {
+  display: none;
+}
+
+.field-select__select::after {}
+
+.field-select__select:hover,
+.field-select__select:focus {
+  height: 37px;
+  border: none;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, .2);
+  color: #323232;
+}
+
+/* ------------------ #Settings-#Radio ------------------ */
+
+.field-radio__input {
+  display: none;
+}
+
+.field-radio__label {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.field-radio__input~.field-radio__label::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-bottom: -5px;
+  margin-right: 8px;
+  background-image: url("/img/radio-off.svg");
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.field-radio__input:checked~.field-radio__label::before {
+  background-image: url("/img/radio-on.svg");
+  background-size: 22px 22px;
+}
+
+/* ------------------ #Settings-#Checkbox ------------------ */
+
+.field-checkbox__input {
+  display: none;
+}
+
+.field-checkbox__label {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.field-checkbox__input~.field-checkbox__label::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 20px;
+  margin-bottom: -5px;
+  margin-right: 8px;
+  background-image: url("/img/checkbox-off.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.field-checkbox__input:checked~.field-checkbox__label::before {
+  background-image: url("/img/checkbox-on.svg");
+  background-size: 24px 20px;
+}
+
+/* ------------------ #Settings-#Button ------------------ */
+
+.settings__btn {
+  padding: 0 30px;
+  height: 37px;
+  border: none;
+  border-radius: 40px;
+  box-shadow: inset 0 0 0 2px white;
+  background: rgba(255, 255, 255, .2);
+  color: white;
+  font-weight: 500;
+}
+
+.settings__btn:hover {
+  background: rgba(255, 255, 255, 1);
+  color: #323232;
+}
+
+.settings__btn:active {
+  box-shadow: inset 0 2px 1px 1px #696969;
+  background: rgba( 237, 237, 237, 1);
+  color: #323232;
 }
