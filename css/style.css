@@ -1,13 +1,13 @@
 :root {
-  font: 400 16px / 22px 'Roboto', Helvetica, Arial, sans-serif;
   box-sizing: border-box;
+  font: 400 16px / 22px 'Roboto', Helvetica, Arial, sans-serif;
 }
 
 *,
 *::before,
 *::after {
-  font-family: inherit;
   box-sizing: inherit;
+  font-family: inherit;
 }
 
 .visually-hidden {
@@ -39,9 +39,9 @@ body {
 
 .flex-row {
   display: flex;
+  align-self: stretch;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-self: stretch;
   outline: 1px dashed crimson;
 }
 
@@ -63,24 +63,24 @@ h3,
 h4,
 h5,
 h6 {
-  color: white;
   margin: 0;
+  color: white;
   line-height: 1.2;
 }
 
 /* ------------------ #Buttons ------------------ */
 
 .btn {
-  font-weight: bold;
+  height: 44px;
+  padding: 0 24px;
   color: white;
   border: none;
   border-radius: 32px;
   background: linear-gradient(to top, #e72f35, #f26843);
-  height: 44px;
-  padding: 0 24px;
-  font-size: 18px;
-  text-shadow: none;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.54);
+  text-shadow: none;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .btn:hover {
@@ -93,17 +93,17 @@ h6 {
 }
 
 .btn:active {
+  color: #fceeec;
   background: linear-gradient(to top, rgba(231, 47, 53, 0.93), rgba(242, 104, 67, 0.93)), black;
   box-shadow: inset 0 1px 2px #952718;
-  color: #fceeec;
 }
 
 .btn--big {
   height: 64px;
   padding: 0 40px;
-  font-size: 32px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  font-size: 32px;
 }
 
 .btn--big:hover {
@@ -118,15 +118,15 @@ h6 {
 
 .field-text__input,
 .field-textarea {
-  padding: 0 10px;
   height: 44px;
-  box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.52);
+  padding: 0 10px;
+  color: #323232;
   border-width: 0;
   border-radius: 5px;
   background-color: white;
-  font-weight: 700;
+  box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.52);
   font-size: 16px;
-  color: #323232;
+  font-weight: 700;
 }
 
 .field-text__input:hover,
@@ -136,8 +136,8 @@ h6 {
 
 .field-text__input:focus,
 .field-textarea:focus {
-  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.52);
   outline: none;
+  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
 .field-text__input:focus::-webkit-input-placeholder,
@@ -162,39 +162,39 @@ h6 {
 
 .field-text__input::-webkit-input-placeholder,
 .field-textarea::-webkit-input-placeholder {
-  font-weight: 400;
-  font-size: 16px;
   color: #999999;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .field-text__input::-ms-input-placeholder,
 .field-textarea::-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 16px;
   color: #999999;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .field-text__input:-ms-input-placeholder,
 .field-textarea:-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 16px;
   color: #999999;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .field-text__input::placeholder,
 .field-textarea::placeholder {
-  font-weight: 400;
-  font-size: 16px;
   color: #999999;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /* весь этот адский кошмар с префиксами в 4 наката потому что есл их все собрать вместе, то не рабоатет ничего совсем :((( */
 
 .field-textarea {
-  padding-top: 10px;
-  resize: none;
   width: 100%;
   min-height: 155px;
+  padding-top: 10px;
+  resize: none;
   /*  max-height: 50vh; */
 }
 
@@ -218,14 +218,16 @@ a:active {
 /* ------------------ #Header ------------------ */
 
 .main-header {
-  justify-content: flex-start;
   align-items: flex-start;
+  justify-content: flex-start;
 }
+
 .main-logo {
   height: 64px;
   margin: 0;
   margin-top: 10px;
 }
+
 .main-logo__img {
   margin: 0;
 }
@@ -233,17 +235,17 @@ a:active {
 /* ------------------ #Main-menu ------------------ */
 
 .main-menu {
-  list-style: none;
   margin: 0;
-  padding: 0;
   margin-top: 24px;
   margin-left: 10px;
+  padding: 0;
+  list-style: none;
 }
 
 .main-menu__item {
-  margin: 0;
   position: relative;
   display: inline-block;
+  margin: 0;
   padding: 5px 10px;
 }
 
@@ -260,8 +262,8 @@ a:active {
 }
 
 .main-menu__item:hover>a {
-  color: #323232;
   text-decoration: none;
+  color: #323232;
 }
 
 .main-menu__item:active {
@@ -270,8 +272,8 @@ a:active {
 }
 
 .main-menu__item:active>a {
-  color: #323232;
   text-decoration: none;
+  color: #323232;
 }
 
 .main-menu__item--active {
@@ -281,18 +283,18 @@ a:active {
 }
 
 .main-menu__item--active>a {
-  color: white;
   text-decoration: none;
+  color: white;
 }
 
 .main-menu__item:hover::after {
-  content: "";
-  display: block;
   position: absolute;
   top: 30px;
   left: 0;
+  display: block;
   width: 100%;
   height: 10px;
+  content: "";
   background: transparent;
 }
 
@@ -304,6 +306,7 @@ a:active {
 
 .main-submenu {
   position: absolute;
+  z-index: 2;
   top: 40px;
   left: -10px;
   display: none;
@@ -314,14 +317,13 @@ a:active {
   border-radius: 5px;
   background: rgb( 248, 247, 244);
   box-shadow: 0px 20px 20px 0px rgba( 0, 0, 0, .4);
-  z-index: 2;
 }
 
 .main-submenu__item {
   display: block;
+  min-width: 200px;
   margin: 5px 0;
   outline: 0px dashed blue;
-  min-width: 200px;
   /* почему переносит слова??? */
 }
 
@@ -347,11 +349,11 @@ a:active {
 
 .main-submenu__item a {
   display: inline-block;
-  font-weight: 400;
-  line-height: 30px;
   padding: 0 20px;
   text-decoration: none;
   color: #323232;
+  font-weight: 400;
+  line-height: 30px;
 }
 
 .main-submenu__item--lead a {
@@ -367,11 +369,11 @@ a:active {
 }
 
 .main-submenu__item--divider::before {
-  content: "";
   display: block;
-  margin: 0 9px;
-  height: 1px;
   width: auto;
+  height: 1px;
+  margin: 0 9px;
+  content: "";
   background: rgb(208, 209, 206);
 }
 
@@ -386,50 +388,50 @@ a:active {
 }
 
 .user-bar__item {
-  display: inline-block;
   position: relative;
-  padding: 8px 16px;
+  display: inline-block;
+  height: 32px;
   margin-left: 5px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
+  padding: 8px 16px;
   color: white;
   border: none;
   border-radius: 40px;
-  height: 32px;
   background-color: rgba(255, 255, 255, .2);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
 }
 
 .user-bar__item:nth-of-type(1) {
   width: 32px;
   padding: 8px 0;
   background-image: url("/img/search-icon.svg");
-  background-position: 8px center;
   background-repeat: no-repeat;
+  background-position: 8px center;
 }
 
 .user-bar__item:nth-of-type(2) {
   min-width: 32px;
   padding-left: 42px;
   background-image: url("/img/enter-icon.svg");
-  background-position: 16px center;
   background-repeat: no-repeat;
+  background-position: 16px center;
 }
 
 .user-bar__item:nth-of-type(3) {
   min-width: 120px;
   padding-left: 42px;
   background-image: url("/img/basket-icon.svg");
-  background-position: 16px center;
   background-repeat: no-repeat;
+  background-position: 16px center;
 }
 
 .user-bar__item:nth-of-type(3).user-bar__item--basket-active {
   min-width: 120px;
   padding-left: 42px;
   background-image: url("/img/basket-icon-active.svg");
-  background-position: 16px center;
   background-repeat: no-repeat;
+  background-position: 16px center;
 }
 
 .user-bar__item:hover {
@@ -454,13 +456,13 @@ a:active {
 }
 
 .user-bar__item:hover::after {
-  content: "";
-  display: block;
   position: absolute;
   top: 30px;
   left: -20%;
+  display: block;
   width: 120%;
   height: 10px;
+  content: "";
   background: transparent;
 }
 
@@ -469,12 +471,12 @@ a:active {
 .search-form,
 .sign-up-form,
 .order {
+  z-index: 2;
   display: none;
   padding: 20px 16px;
   border-radius: 6px;
   background-color: rgb( 248, 247, 244);
   box-shadow: 0px 20px 20px 0px rgba( 0, 0, 0, .4);
-  z-index: 2;
 }
 
 .user-bar__item:hover .search-form {
@@ -495,9 +497,9 @@ a:active {
   position: absolute;
   top: 40px;
   right: 0;
-  width: 280px;
   display: flex;
   flex-flow: column wrap;
+  width: 280px;
 }
 
 .sign-up-form>*:not(:last-child) {
@@ -552,10 +554,10 @@ a:active {
 /* ------------------ #Breadcrumbs ------------------ */
 
 .breadcrumbs {
+  align-self: flex-end;
   margin: 0;
   margin-bottom: 5px;
   outline: 1px dashed lightseagreen;
-  align-self: flex-end;
 }
 
 .breadcrumbs a {
@@ -568,9 +570,9 @@ a:active {
 }
 
 .breadcrumbs a:not(:last-of-type)::after {
-  content: "»";
   display: inline-block;
   margin: 0 10px;
+  content: "»";
   font-size: 14px;
   line-height: 16px;
 }
@@ -578,22 +580,22 @@ a:active {
 /* ------------------ #Schedule ------------------ */
 
 .schedule {
+  align-self: flex-end;
   margin: 0;
   margin-right: 2.3%;
-  align-self: flex-end;
   text-align: right;
   color: white;
   font-size: 14px;
-  line-height: 26px;
   font-weight: 700;
+  line-height: 26px;
 }
 
 .schedule a {
+  text-decoration: none;
   color: white;
   font-size: 22px;
-  line-height: 24px;
-  text-decoration: none;
   font-weight: 700;
+  line-height: 24px;
 }
 
 /* ------------------ #Promo ------------------ */
@@ -603,14 +605,14 @@ a:active {
 }
 
 .promo-case {
-  flex-basis: 46.6%;
   display: flex;
   flex-flow: column nowrap;
+  flex-basis: 46.6%;
   justify-content: flex-start;
-  padding: 20px;
   min-height: 230px;
-  border-radius: 10px;
+  padding: 20px;
   color: white;
+  border-radius: 10px;
   font-weight: 700;
 }
 
@@ -626,33 +628,33 @@ a:active {
 
 .promo-case:first-of-type {
   margin-left: 2.3%;
+  background-color: crimson;
   background-image: url('/img/bg/raspberries-bg.jpg');
   background-position: center center;
-  background-color: crimson;
 }
 
 .promo-case:last-of-type {
+  background-color: brown;
   background-image: url('/img/bg/chocolate-bg.jpg');
   background-position: center center;
-  background-color: brown;
 }
 
 .promo-case .btn {
-  margin-top: auto;
   align-self: flex-end;
+  margin-top: auto;
 }
 
 /* ------------------ #Shopping-card ------------------ */
 
 .shopping-card {
-  flex-basis: 22.2%;
   position: relative;
   display: flex;
+  align-items: center;
+  flex-basis: 22.2%;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  border-radius: 8px;
   text-align: center;
+  border-radius: 8px;
   outline: 1px dashed blueviolet;
 }
 
@@ -674,20 +676,20 @@ a:active {
   width: 100%;
   max-width: 100%;
   height: auto;
-  background: rebeccapurple;
-  border-radius: 300px;
   margin-bottom: 10px;
+  border-radius: 300px;
+  background: rebeccapurple;
 }
 
 .shopping-card__cost {
   position: absolute;
-  left: 0;
   top: 170px;
+  left: 0;
   align-self: flex-start;
-  font-size: 45px;
-  font-weight: bold;
   color: white;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 45px;
+  font-weight: bold;
 }
 
 .shopping-card__cost::after {
@@ -707,34 +709,34 @@ a:active {
 /* ------------------ #Advantages ------------------ */
 
 .advantages {
-  margin-left: 2.3%;
-  margin-right: 2.3%;
-  margin-top: 40px;
-  margin-bottom: 40px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  margin-top: 40px;
+  margin-right: 2.3%;
+  margin-bottom: 40px;
+  margin-left: 2.3%;
+  padding: 18px;
   border: none;
   border-radius: 10px;
-  padding: 18px;
   background-image: url('/img/bg/waffle-pattern.jpg');
 }
 
 .advantages__title {
   flex-basis: 100%;
-  font-size: 24px;
-  font-weight: 500;
-  color: rgb( 50, 50, 50);
-  line-height: 30px;
   margin-top: 5px;
   margin-bottom: 5px;
+  color: rgb( 50, 50, 50);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
 }
 
 .advantages__item {
   position: relative;
-  margin-left: 56px;
-  margin-bottom: 10px;
   flex-basis: 41%;
+  margin-bottom: 10px;
+  margin-left: 56px;
   color: rgb( 50, 50, 50);
 }
 
@@ -743,13 +745,13 @@ a:active {
 }
 
 .advantages__item::before {
-  content: "";
   position: absolute;
   top: -10px;
   left: -56px;
   display: block;
   width: 49px;
   height: 49px;
+  content: "";
   border-radius: 50px;
 }
 
@@ -772,20 +774,19 @@ a:active {
 /* ------------------ #Blog ------------------ */
 
 .blog-post {
-  flex-basis: 46.6%;
-  justify-self: flex-start;
   display: flex;
   flex-flow: column nowrap;
+  flex-basis: 46.6%;
   justify-content: flex-start;
-  background-color: bisque;
   min-height: 220px;
   padding: 20px;
-  border-radius: 10px;
   color: #323232;
+  border-radius: 10px;
   background: url("/img/bg/strawberry-bg.jpg"), white;
   background-repeat: no-repeat;
-  background-size: 70%;
   background-position: 120% 10%;
+  background-size: 70%;
+  justify-self: flex-start;
 }
 
 .blog-post b {
@@ -796,37 +797,37 @@ a:active {
 .blog-post__link {
   display: inline-block;
   max-width: 60%;
+  color: #323232;
   font-size: 24px;
   font-weight: bold;
   line-height: 30px;
-  color: #323232;
 }
 
 .blog-post__link:hover {
-  font-weight: bold;
   color: #e84d37;
+  font-weight: bold;
 }
 
 /* ------------------ #Subscribe ------------------ */
 
 .subscribe {
   flex-basis: 46.6%;
-  justify-self: flex-end;
-  background-color: cornflowerblue;
   min-height: 220px;
   padding: 6px;
-  background-image: repeating-linear-gradient( -45deg, transparent, transparent 7px, rgb(254, 158, 144) 7px, rgb(254, 158, 144) 14px, transparent 14px, transparent 21px, rgb(146, 205, 255) 21px, rgb(146, 205, 255) 28px);
-  background-color: rgb(248, 247, 244);
   border: none;
   border-radius: 10px;
+  background-color: cornflowerblue;
+  background-color: rgb(248, 247, 244);
+  background-image: repeating-linear-gradient( -45deg, transparent, transparent 7px, rgb(254, 158, 144) 7px, rgb(254, 158, 144) 14px, transparent 14px, transparent 21px, rgb(146, 205, 255) 21px, rgb(146, 205, 255) 28px);
+  justify-self: flex-end;
 }
 
 .subscribe-inner {
   width: 100%;
   height: 100%;
   padding: 20px;
-  background-color: rgb(248, 247, 244);
   border-radius: 10px;
+  background-color: rgb(248, 247, 244);
 }
 
 .subscribe-inner p {
@@ -853,27 +854,27 @@ a:active {
 
 .map {
   position: relative;
-  margin-top: 40px;
   min-height: 430px;
-  background-image: url("img/bg/map-raster-image.jpg");
+  margin-top: 40px;
   outline: 0px dashed aqua;
+  background-image: url("img/bg/map-raster-image.jpg");
 }
 
 /* ------------------ #Contact ------------------ */
 
 .contact {
-  align-self: center;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  padding: 25px;
   position: absolute;
   top: 15%;
   right: 2.3%;
-  border-radius: 15px;
-  background-color: white;
+  display: flex;
+  align-self: center;
+  flex-flow: column nowrap;
+  justify-content: space-between;
   width: 303px;
   height: 70%;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: white;
 }
 
 .contact small {
@@ -882,8 +883,8 @@ a:active {
 }
 
 .contact address {
-  font-style: normal;
   margin-bottom: 25px;
+  font-style: normal;
 }
 
 .contact b {
@@ -892,10 +893,10 @@ a:active {
 }
 
 .contact a {
+  text-decoration: none;
+  color: black;
   font-size: 18px;
   line-height: 22px;
-  color: black;
-  text-decoration: none;
 }
 
 .contact .btn {
@@ -912,10 +913,10 @@ a:active {
 /* ------------------ #Socials ------------------ */
 
 .socials {
-  list-style: none;
   margin: 0;
   margin-bottom: 28px;
   padding: 0;
+  list-style: none;
 }
 
 .socials__item {
@@ -927,12 +928,12 @@ a:active {
   display: block;
   width: 32px;
   height: 32px;
+  opacity: .8;
+  border: none;
+  border-radius: 32px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 32px 32px;
-  border: none;
-  border-radius: 32px;
-  opacity: .8;
   box-shadow: 0 0 0 3px rgba( 255, 255, 255, .5);
 }
 
@@ -965,15 +966,15 @@ a:active {
 /* ------------------ #Doc-links ------------------ */
 
 .doc-links {
-  flex-basis: 35%;
   display: flex;
-  flex-flow: column wrap;
   align-content: center;
+  flex-flow: column wrap;
+  flex-basis: 35%;
   height: 3rem;
-  list-style: none;
   margin: 0;
   margin-bottom: 18px;
   padding: 0;
+  list-style: none;
 }
 
 .doc-links__item {
@@ -992,13 +993,13 @@ a:active {
 }
 
 .doc-links__item:first-child::before {
-  display: block;
   position: absolute;
   top: 0;
   left: -24px;
-  content: "";
+  display: block;
   width: 19px;
   height: 19px;
+  content: "";
   background-image: url("/img/heart-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1008,11 +1009,11 @@ a:active {
 /* ------------------ #Copyright ------------------ */
 
 .copyright {
-  font-size: 12px;
-  line-height: 18px;
-  color: white;
   margin-top: 0;
   margin-bottom: 28px;
+  color: white;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .copyright a {
@@ -1023,6 +1024,7 @@ a:active {
 
 .modal {
   position: fixed;
+  z-index: 9999;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1032,35 +1034,34 @@ a:active {
   flex-flow: row nowrap;
   justify-content: space-around;
   background: rgba(0, 0, 0, 0.3);
-  z-index: 9999;
 }
 
 .get-in-touch {
   position: relative;
-  align-self: center;
   display: flex;
+  align-items: flex-start;
+  align-self: center;
   flex-flow: column nowrap;
   justify-content: space-between;
-  align-items: flex-start;
-  background: #f8f7f4;
+  width: 478px;
   padding: 24px;
   border: none;
   border-radius: 10px;
-  width: 478px;
+  background: #f8f7f4;
 }
 
 .get-in-touch b {
+  margin-bottom: 20px;
   font-size: 24px;
   line-height: 28px;
-  margin-bottom: 20px;
 }
 
 .get-in-touch-form {
-  align-self: stretch;
   display: flex;
+  align-items: flex-start;
+  align-self: stretch;
   flex-flow: column nowrap;
   justify-content: space-between;
-  align-items: flex-start;
 }
 
 .get-in-touch-form .btn {
@@ -1077,17 +1078,17 @@ a:active {
 
 .get-in-touch .close-modal {
   position: absolute;
-  right: 20px;
   top: 20px;
+  right: 20px;
   width: 20px;
   height: 20px;
-  background: transparent;
   border: none;
-  font-size: 40px;
+  background: transparent;
   background-image: url("/img/x-icon.svg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
   background-position: center center;
+  background-size: 100% 100%;
+  font-size: 40px;
 }
 
 /* ------------------ #Settings ------------------ */
@@ -1097,21 +1098,21 @@ a:active {
 }
 
 .settings .flex-row {
-  justify-content: flex-start;
   align-items: flex-end;
+  justify-content: flex-start;
   height: 62px;
 }
 
 .settings__fieldset {
   position: relative;
+  height: 37px;
+  margin: 0;
+  margin-right: 14px;
+  padding: 0 15px;
+  padding-top: 8px;
   border: none;
   border-radius: 40px;
   background: rgba(255, 255, 255, .2);
-  padding: 0 15px;
-  padding-top: 8px;
-  margin: 0;
-  margin-right: 14px;
-  height: 37px;
 }
 
 .settings__fieldset-radio,
@@ -1123,12 +1124,12 @@ a:active {
 .field-range__label,
 .settings__legend {
   display: block;
-  margin-left: 12px;
   margin-bottom: 5px;
+  margin-left: 12px;
+  color: white;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
-  color: white;
 }
 
 .settings__legend {
@@ -1141,14 +1142,14 @@ a:active {
 /* ------------------ #Settings-#Select ------------------ */
 
 .field-select__select {
-  padding: 0 15px;
   width: 200px;
   height: 37px;
-  font-weight: 500;
+  padding: 0 15px;
+  color: white;
   border: none;
   border-radius: 40px;
   background: rgba(255, 255, 255, .2);
-  color: white;
+  font-weight: 500;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1163,10 +1164,10 @@ a:active {
 .field-select__select:hover,
 .field-select__select:focus {
   height: 37px;
+  color: #323232;
   border: none;
   border-radius: 40px;
   background: rgba(255, 255, 255, .2);
-  color: #323232;
 }
 
 /* ------------------ #Settings-#Radio ------------------ */
@@ -1178,29 +1179,31 @@ a:active {
 .field-radio__label {
   display: inline-block;
   margin-right: 15px;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
   color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
 }
 
 .field-radio__input~.field-radio__label::before {
-  content: "";
   display: inline-block;
   width: 22px;
   height: 22px;
-  margin-bottom: -5px;
   margin-right: 8px;
+  margin-bottom: -5px;
+  content: "";
   background-image: url("/img/radio-off.svg");
-  background-size: 22px 22px;
   background-repeat: no-repeat;
   background-position: left center;
+  background-size: 22px 22px;
 }
 
 .field-radio__input:checked~.field-radio__label::before {
   background-image: url("/img/radio-on.svg");
   background-size: 22px 22px;
 }
+
+/* СОСТОЯНИЕ ПРИ НАВЕДЕНИИ!!! */
 
 /* ------------------ #Settings-#Checkbox ------------------ */
 
@@ -1211,23 +1214,23 @@ a:active {
 .field-checkbox__label {
   display: inline-block;
   margin-right: 15px;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
   color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
 }
 
 .field-checkbox__input~.field-checkbox__label::before {
-  content: "";
   display: inline-block;
   width: 24px;
   height: 20px;
-  margin-bottom: -5px;
   margin-right: 8px;
+  margin-bottom: -5px;
+  content: "";
   background-image: url("/img/checkbox-off.svg");
-  background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: left center;
+  background-size: 20px 20px;
 }
 
 .field-checkbox__input:checked~.field-checkbox__label::before {
@@ -1235,28 +1238,30 @@ a:active {
   background-size: 24px 20px;
 }
 
+/* СОСТОЯНИЕ ПРИ НАВЕДЕНИИ!!! */
+
 /* ------------------ #Settings-#Button ------------------ */
 
 .settings__btn {
-  padding: 0 30px;
   height: 37px;
+  padding: 0 30px;
+  color: white;
   border: none;
   border-radius: 40px;
-  box-shadow: inset 0 0 0 2px white;
   background: rgba(255, 255, 255, .2);
-  color: white;
+  box-shadow: inset 0 0 0 2px white;
   font-weight: 500;
 }
 
 .settings__btn:hover {
-  background: rgba(255, 255, 255, 1);
   color: #323232;
+  background: rgba(255, 255, 255, 1);
 }
 
 .settings__btn:active {
-  box-shadow: inset 0 2px 1px 1px #696969;
-  background: rgba( 237, 237, 237, 1);
   color: #323232;
+  background: rgba( 237, 237, 237, 1);
+  box-shadow: inset 0 2px 1px 1px #696969;
 }
 
 /* ------------------ #Catalog ------------------ */
@@ -1280,4 +1285,57 @@ a:active {
 .catalog>*:nth-child(4n+4) {
   margin-right: 2.3%;
   outline: 2px dotted springgreen;
+}
+
+/* ------------------ #Catalog-pagination ------------------ */
+
+.catalog-pagination {
+  margin: 40px 2.3%;
+  text-align: right;
+  outline: 1px dashed aqua;
+}
+
+.catalog-pagination__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 26px;
+  height: 26px;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0);
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.catalog-pagination__item:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.catalog-pagination__item--current {
+  color: black;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.catalog-pagination__item--disabled {
+  opacity: .2;
+}
+
+.catalog-pagination__item--disabled:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.catalog-pagination__item--arrow-prev {
+  background-image: url("/img/pagination-arrow-left.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.catalog-pagination__item--arrow-next {
+  background-image: url("/img/pagination-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
