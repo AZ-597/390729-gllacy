@@ -215,17 +215,319 @@ a:active {
   font-weight: 500;
 }
 
-/* ------------------ #Layout ------------------ */
+/* ------------------ #Header ------------------ */
 
 .main-header {
   justify-content: flex-start;
 }
 
-.user-bar {
-  margin-left: auto;
+/* ------------------ #Main-menu ------------------ */
+
+.main-menu {
+  list-style: none;
 }
 
-/* ------------------ #Breadcrumbs ------------------ */
+.main-menu__item {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.main-menu__item:hover>a {
+  display: inline-block;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.main-menu__item:hover {
+  border: none;
+  border-radius: 40px;
+  background: rgb( 247, 246, 243);
+}
+
+.main-menu__item:hover>a {
+  color: #323232;
+  text-decoration: none;
+}
+
+.main-menu__item:active {
+  background: rgb( 237, 237, 237);
+  box-shadow: inset 0 2px 1px 0 #696969;
+}
+
+.main-menu__item:active>a {
+  color: #323232;
+  text-decoration: none;
+}
+
+.main-menu__item--active {
+  border: none;
+  border-radius: 40px;
+  background: rgb( 208, 112, 88);
+}
+
+.main-menu__item--active>a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-menu__item:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: transparent;
+}
+
+.main-menu__item:hover .main-submenu {
+  display: block;
+}
+
+/* ------------------ #Main-submenu ------------------ */
+
+.main-submenu {
+  position: absolute;
+  top: 40px;
+  left: -10px;
+  display: none;
+  margin: 0;
+  padding: 5px 0;
+  list-style: none;
+  border: none;
+  border-radius: 5px;
+  background: rgb( 248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba( 0, 0, 0, .4);
+}
+
+.main-submenu__item {
+  display: block;
+  margin: 5px 0;
+  outline: 0px dashed blue;
+  min-width: 200px;
+  /* почему переносит слова??? */
+}
+
+.main-submenu__item:hover {
+  background: rgb( 251, 222, 215);
+}
+
+.main-submenu__item:hover a {
+  color: #323232;
+}
+
+.main-submenu__item:active {
+  background: rgb( 246, 181, 165);
+}
+
+.main-submenu__item:active a {
+  color: #323232;
+}
+
+.main-submenu__item--active {
+  background: rgb( 208, 112, 88);
+}
+
+.main-submenu__item a {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 30px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #323232;
+}
+
+.main-submenu__item--lead a {
+  font-weight: 700;
+}
+
+.main-submenu__item--active a {
+  color: white;
+}
+
+.main-submenu__item--divider {
+  height: 1px;
+}
+
+.main-submenu__item--divider::before {
+  content: "";
+  display: block;
+  margin: 0 9px;
+  height: 1px;
+  width: auto;
+  background: rgb(208, 209, 206);
+}
+
+/* ------------------ #User-bar ------------------ */
+
+.user-bar {
+  margin: 0;
+  margin-top: 16px;
+  margin-left: auto;
+  padding: 0;
+  list-style: none;
+}
+
+.user-bar__item {
+  display: inline-block;
+  position: relative;
+  padding: 8px 16px;
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.user-bar__item:nth-of-type(1) {
+  width: 32px;
+  padding: 8px 0;
+  background-image: url("/img/search-icon.svg");
+  background-position: 8px center;
+  background-repeat: no-repeat;
+}
+
+.user-bar__item:nth-of-type(2) {
+  min-width: 32px;
+  padding-left: 42px;
+  background-image: url("/img/enter-icon.svg");
+  background-position: 16px center;
+  background-repeat: no-repeat;
+}
+
+.user-bar__item:nth-of-type(3) {
+  min-width: 120px;
+  padding-left: 42px;
+  background-image: url("/img/basket-icon.svg");
+  background-position: 16px center;
+  background-repeat: no-repeat;
+}
+
+.user-bar__item:nth-of-type(3).user-bar__item--basket-active {
+  min-width: 120px;
+  padding-left: 42px;
+  background-image: url("/img/basket-icon-active.svg");
+  background-position: 16px center;
+  background-repeat: no-repeat;
+}
+
+.user-bar__item:hover {
+  color: #323232;
+  background-color: rgba(248, 247, 244, 1);
+}
+
+.user-bar__item:hover:nth-of-type(1) {
+  background-image: url("/img/search-icon-dark.svg");
+}
+
+.user-bar__item:hover:nth-of-type(2) {
+  background-image: url("/img/enter-icon-dark.svg");
+}
+
+.user-bar__item:hover:nth-of-type(3) {
+  background-image: url("/img/basket-icon-dark.svg");
+}
+
+.user-bar__item:nth-of-type(3).user-bar__item--basket-active:hover {
+  background-image: url("/img/basket-icon-active-dark.svg");
+}
+
+.user-bar__item:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: -20%;
+  width: 120%;
+  height: 10px;
+  background: transparent;
+}
+
+/* ------------------ #Search, #SignUp ------------------ */
+
+.search-form,
+.sign-up-form,
+.order {
+  display: none;
+  padding: 20px 16px;
+  border-radius: 6px;
+  background-color: rgb( 248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba( 0, 0, 0, .4);
+}
+
+.user-bar__item:hover .search-form {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  display: block;
+  width: 340px;
+}
+
+.search-form .field-text__input {
+  width: 100%;
+}
+
+/*  ------------- #Sign-up-form ------------- */
+
+.user-bar__item:hover .sign-up-form {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 280px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.sign-up-form>*:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.sign-up-form .field-text__input {
+  width: 100%;
+}
+
+.sign-up-form .btn {
+  margin-right: auto;
+}
+
+.sign-up-form__control {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.sign-up-form__links {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.sign-up-form__links a {
+  color: #323232;
+  ;
+}
+
+.sign-up-form__links a:hover {
+  color: #e84d37;
+  ;
+}
+
+/* ------------------ #Order ------------------ */
+
+.user-bar__item:hover .order {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  display: block;
+}
+
+/* ------------------ #Catalog-heading ------------------ */
 
 .catalog-header {
   margin-left: 2.3%;
@@ -482,7 +784,10 @@ a:active {
   color: #323232;
 }
 
-/* должен быть насыщенный цвет при наведении */
+.blog-post__link:hover {
+  font-weight: bold;
+  color: #e84d37;
+}
 
 /* ------------------ #Subscribe ------------------ */
 
@@ -810,8 +1115,8 @@ a:active {
 
 .settings__legend {
   position: absolute;
-  top:-20px;
-  left:15px;
+  top: -20px;
+  left: 15px;
   margin-left: 0;
 }
 
@@ -934,4 +1239,27 @@ a:active {
   box-shadow: inset 0 2px 1px 1px #696969;
   background: rgba( 237, 237, 237, 1);
   color: #323232;
+}
+
+/* ------------------ #Catalog ------------------ */
+
+.catalog {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-top: 36px;
+}
+
+.catalog>* {
+  margin-right: 2.2%;
+}
+
+.catalog>*:nth-child(4n+1) {
+  margin-left: 2.3%;
+  outline: 2px dotted greenyellow;
+}
+
+.catalog>*:nth-child(4n+4) {
+  margin-right: 2.3%;
+  outline: 2px dotted springgreen;
 }

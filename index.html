@@ -17,13 +17,14 @@
       </a>
       <ul class="main-menu" aria-label="Навигация по сайту" tabindex="0">
         <li class="main-menu__item">
-          <a href="catalog.html">Каталог</a>
+          <a href="#">Каталог</a>
           <ul class="main-submenu">
             <li class="main-submenu__item main-submenu__item--lead">
               <a href="#">Новинки</a>
             </li>
+            <li class="main-submenu__item main-submenu__item--divider"></li>
             <li class="main-submenu__item">
-              <a href="#">Сливочные</a>
+              <a href="catalog.html">Сливочные</a>
             </li>
             <li class="main-submenu__item">
               <a href="#">Щербеты</a>
@@ -44,7 +45,7 @@
         </li>
       </ul>
       <ul class="user-bar" aria-label="Пользовательское меню" tabindex="0">
-        <li class="user-bar__item">[Search]
+        <li class="user-bar__item">&nbsp;
           <form class="search-form" action="https://echo.htmlacademy.ru">
             <div class="field-text">
               <label class="field-text__label visually-hidden" for="user-bar-search">Поиск по сайту</label>
@@ -66,15 +67,19 @@
               <input class="field-text__input" id="sign-up-form-pass" type="password" name="password" placeholder="Пароль">
             </div>
 
-            <button class="btn" type="submit">Войти</button>
+            <div class="sign-up-form__control">
+              <button class="btn" type="submit">Войти</button>
 
-            <a href="#">Забыли пароль?</a>
-            <a href="#">Новая регистрация</a>
+              <div class="sign-up-form__links">
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </div>
+            </div>
           </form>
         </li>
 
-        <li class="user-bar__item" aria-label="Список заказов пуст" tabindex="0">[Basket]
-          <span>Пусто</span>
+        <li class="user-bar__item" aria-label="Список заказов пуст" tabindex="0">
+          Пусто
         </li>
       </ul>
     </header>

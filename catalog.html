@@ -16,13 +16,13 @@
         <img src="img/gllacy-logo.svg" width="154px" height="64px" alt="Gllacy logo" class="main-logo__img">
       </a>
       <ul class="main-menu" aria-label="Навигация по сайту" tabindex="0">
-        <li class="main-menu__item">
+        <li class="main-menu__item main-menu__item--active">
           <a href="catalog.html">Каталог</a>
           <ul class="main-submenu">
             <li class="main-submenu__item main-submenu__item--lead">
               <a href="#">Новинки</a>
             </li>
-            <li class="main-submenu__item">
+            <li class="main-submenu__item main-submenu__item--active">
               <a href="#">Сливочные</a>
             </li>
             <li class="main-submenu__item">
@@ -44,7 +44,7 @@
         </li>
       </ul>
       <ul class="user-bar" aria-label="Пользовательское меню" tabindex="0">
-        <li class="user-bar__item">[Search]
+        <li class="user-bar__item">&nbsp;
           <form class="search-form" action="https://echo.htmlacademy.ru">
             <div class="field-text">
               <label class="field-text__label visually-hidden" for="user-bar-search">Поиск по сайту</label>
@@ -66,14 +66,18 @@
               <input class="field-text__input" id="sign-up-form-pass" type="password" name="password" placeholder="Пароль">
             </div>
 
-            <button class="btn" type="submit">Войти</button>
+            <div class="sign-up-form__control">
+              <button class="btn" type="submit">Войти</button>
 
-            <a href="#">Забыли пароль?</a>
-            <a href="#">Новая регистрация</a>
+              <div class="sign-up-form__links">
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </div>
+            </div>
           </form>
         </li>
-        <li class="user-bar__item" aria-label="Список заказов: товаров 2" tabindex="0">
-          [Basket--active] 2 товара
+        <li class="user-bar__item user-bar__item--basket-active" aria-label="Список заказов: товаров 2" tabindex="0">
+          2 товара
           <div class="order" aria-label="Карточка товаров" tabindex="0">
             <ul class="order__order-list order-list">
               <li class="order-list__order-item order-item">
@@ -192,7 +196,7 @@
       </form>
 
 
-      <section class="catalog flex-row">
+      <section class="catalog">
 
         <div class="shopping-card">
           <img src="img/ice-cream/popular-icecream-1.jpg" width="267" height="267" class="shopping-card__img" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
