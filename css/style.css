@@ -219,15 +219,29 @@ a:active {
 
 .main-header {
   justify-content: flex-start;
+  align-items: flex-start;
+}
+.main-logo {
+  height: 64px;
+  margin: 0;
+  margin-top: 10px;
+}
+.main-logo__img {
+  margin: 0;
 }
 
 /* ------------------ #Main-menu ------------------ */
 
 .main-menu {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
+  margin-left: 10px;
 }
 
 .main-menu__item {
+  margin: 0;
   position: relative;
   display: inline-block;
   padding: 5px 10px;
@@ -300,6 +314,7 @@ a:active {
   border-radius: 5px;
   background: rgb( 248, 247, 244);
   box-shadow: 0px 20px 20px 0px rgba( 0, 0, 0, .4);
+  z-index: 2;
 }
 
 .main-submenu__item {
@@ -364,7 +379,7 @@ a:active {
 
 .user-bar {
   margin: 0;
-  margin-top: 16px;
+  margin-top: 24px;
   margin-left: auto;
   padding: 0;
   list-style: none;
@@ -459,6 +474,7 @@ a:active {
   border-radius: 6px;
   background-color: rgb( 248, 247, 244);
   box-shadow: 0px 20px 20px 0px rgba( 0, 0, 0, .4);
+  z-index: 2;
 }
 
 .user-bar__item:hover .search-form {
@@ -536,7 +552,8 @@ a:active {
 /* ------------------ #Breadcrumbs ------------------ */
 
 .breadcrumbs {
-  margin: 28px auto;
+  margin: 0;
+  margin-bottom: 5px;
   outline: 1px dashed lightseagreen;
   align-self: flex-end;
 }
@@ -550,7 +567,7 @@ a:active {
   text-decoration: none;
 }
 
-.breadcrumbs a:not(:last-of-type):after {
+.breadcrumbs a:not(:last-of-type)::after {
   content: "»";
   display: inline-block;
   margin: 0 10px;
@@ -561,6 +578,7 @@ a:active {
 /* ------------------ #Schedule ------------------ */
 
 .schedule {
+  margin: 0;
   margin-right: 2.3%;
   align-self: flex-end;
   text-align: right;
@@ -838,7 +856,7 @@ a:active {
   margin-top: 40px;
   min-height: 430px;
   background-image: url("img/bg/map-raster-image.jpg");
-  outline: 1px dashed aqua;
+  outline: 0px dashed aqua;
 }
 
 /* ------------------ #Contact ------------------ */
