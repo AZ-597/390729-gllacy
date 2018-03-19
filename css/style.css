@@ -218,12 +218,12 @@ a:active {
 /* ------------------ #Header ------------------ */
 
 .main-header {
-  align-items: flex-start;
+  position: relative;
+  align-items: center;
   justify-content: flex-start;
 }
 
 .main-logo {
-  height: 64px;
   margin: 0;
   margin-top: 10px;
 }
@@ -235,24 +235,25 @@ a:active {
 /* ------------------ #Main-menu ------------------ */
 
 .main-menu {
+  display: flex;
   margin: 0;
-  margin-top: 24px;
-  margin-left: 10px;
+  margin-left: 12px;
   padding: 0;
   list-style: none;
 }
 
 .main-menu__item {
+  display: flex;
+  align-items: center;
   position: relative;
-  display: inline-block;
   margin: 0;
-  padding: 5px 10px;
+  margin-right: 8px;
+  padding: 0 10px;
 }
 
-.main-menu__item:hover>a {
-  display: inline-block;
+.main-menu__item > a {
   font-weight: 700;
-  line-height: 18px;
+  line-height: 32px;
 }
 
 .main-menu__item:hover {
@@ -261,7 +262,7 @@ a:active {
   background: rgb( 247, 246, 243);
 }
 
-.main-menu__item:hover>a {
+.main-menu__item:hover > a {
   text-decoration: none;
   color: #323232;
 }
@@ -271,7 +272,7 @@ a:active {
   box-shadow: inset 0 2px 1px 0 #696969;
 }
 
-.main-menu__item:active>a {
+.main-menu__item:active > a {
   text-decoration: none;
   color: #323232;
 }
@@ -282,7 +283,7 @@ a:active {
   background: rgb( 208, 112, 88);
 }
 
-.main-menu__item--active>a {
+.main-menu__item--active > a {
   text-decoration: none;
   color: white;
 }
@@ -320,11 +321,20 @@ a:active {
 }
 
 .main-submenu__item {
-  display: block;
-  min-width: 200px;
+  display: flex;
+  align-items: center;
   margin: 5px 0;
   outline: 0px dashed blue;
-  /* почему переносит слова??? */
+  white-space: nowrap;
+}
+
+.main-submenu__item a {
+  display: block;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #323232;
+  font-weight: 400;
+  line-height: 30px;
 }
 
 .main-submenu__item:hover {
@@ -347,24 +357,16 @@ a:active {
   background: rgb( 208, 112, 88);
 }
 
-.main-submenu__item a {
-  display: inline-block;
-  padding: 0 20px;
-  text-decoration: none;
-  color: #323232;
-  font-weight: 400;
-  line-height: 30px;
+.main-submenu__item--active a {
+  color: white;
 }
 
 .main-submenu__item--lead a {
   font-weight: 700;
 }
 
-.main-submenu__item--active a {
-  color: white;
-}
-
 .main-submenu__item--divider {
+  display: block;
   height: 1px;
 }
 
@@ -380,8 +382,8 @@ a:active {
 /* ------------------ #User-bar ------------------ */
 
 .user-bar {
+  display: flex;
   margin: 0;
-  margin-top: 24px;
   margin-left: auto;
   padding: 0;
   list-style: none;
@@ -389,9 +391,8 @@ a:active {
 
 .user-bar__item {
   position: relative;
-  display: inline-block;
   height: 32px;
-  margin-left: 5px;
+  margin-left: 9px;
   padding: 8px 16px;
   color: white;
   border: none;
@@ -412,15 +413,15 @@ a:active {
 
 .user-bar__item:nth-of-type(2) {
   min-width: 32px;
-  padding-left: 42px;
+  padding-left: 46px;
   background-image: url("/img/enter-icon.svg");
   background-repeat: no-repeat;
   background-position: 16px center;
 }
 
 .user-bar__item:nth-of-type(3) {
-  min-width: 120px;
-  padding-left: 42px;
+  min-width: 116px;
+  padding-left: 44px;
   background-image: url("/img/basket-icon.svg");
   background-repeat: no-repeat;
   background-position: 16px center;
@@ -579,8 +580,11 @@ a:active {
 
 /* ------------------ #Schedule ------------------ */
 
-.schedule {
-  align-self: flex-end;
+.schedule {/*
+  position: absolute;
+  right: 2.3%;
+  top:40px; */
+
   margin: 0;
   margin-right: 2.3%;
   text-align: right;
@@ -612,13 +616,13 @@ a:active {
   min-height: 230px;
   padding: 20px;
   color: white;
-  border-radius: 10px;
+  border-radius: 15px;
   font-weight: 700;
 }
 
 .promo-case__slogan {
   font-size: 35px;
-  line-height: 41px;
+  line-height: 35px;
 }
 
 .promo-case__lead {
@@ -642,6 +646,7 @@ a:active {
 .promo-case .btn {
   align-self: flex-end;
   margin-top: auto;
+  margin-bottom: 4px;
 }
 
 /* ------------------ #Shopping-card ------------------ */
@@ -655,6 +660,7 @@ a:active {
   justify-content: flex-start;
   text-align: center;
   border-radius: 8px;
+  margin-bottom: 40px;
   outline: 1px dashed blueviolet;
 }
 
@@ -718,7 +724,7 @@ a:active {
   margin-left: 2.3%;
   padding: 18px;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   background-image: url('/img/bg/waffle-pattern.jpg');
 }
 
@@ -734,14 +740,12 @@ a:active {
 
 .advantages__item {
   position: relative;
-  flex-basis: 41%;
-  margin-bottom: 10px;
-  margin-left: 56px;
+  flex-basis: 41.5%;
+  margin-bottom: 4px;
+  margin-left: 58px;
   color: rgb( 50, 50, 50);
-}
-
-.advantages__item:nth-child(odd) {
-  margin-right: 2.2%;
+  font-size: 16px;
+  line-height: 23px;
 }
 
 .advantages__item::before {
@@ -781,22 +785,22 @@ a:active {
   min-height: 220px;
   padding: 20px;
   color: #323232;
-  border-radius: 10px;
+  border-radius: 15px;
   background: url("/img/bg/strawberry-bg.jpg"), white;
   background-repeat: no-repeat;
-  background-position: 120% 10%;
+  background-position: 120% 20%;
   background-size: 70%;
   justify-self: flex-start;
 }
 
 .blog-post b {
-  margin: 10px 0;
   font-weight: 500;
 }
 
 .blog-post__link {
-  display: inline-block;
-  max-width: 60%;
+  margin-top: 5px;
+  display: block;
+  max-width: 55%;
   color: #323232;
   font-size: 24px;
   font-weight: bold;
@@ -815,7 +819,7 @@ a:active {
   min-height: 220px;
   padding: 6px;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: cornflowerblue;
   background-color: rgb(248, 247, 244);
   background-image: repeating-linear-gradient( -45deg, transparent, transparent 7px, rgb(254, 158, 144) 7px, rgb(254, 158, 144) 14px, transparent 14px, transparent 21px, rgb(146, 205, 255) 21px, rgb(146, 205, 255) 28px);
@@ -864,7 +868,7 @@ a:active {
 
 .contact {
   position: absolute;
-  top: 15%;
+  top: 14%;
   right: 2.3%;
   display: flex;
   align-self: center;
@@ -872,7 +876,7 @@ a:active {
   justify-content: space-between;
   width: 303px;
   height: 70%;
-  padding: 25px;
+  padding:28px 25px;
   border-radius: 15px;
   background-color: white;
 }
@@ -883,7 +887,7 @@ a:active {
 }
 
 .contact address {
-  margin-bottom: 25px;
+  margin-bottom: 14px;
   font-style: normal;
 }
 
@@ -906,26 +910,27 @@ a:active {
 /* ------------------ #Footer ------------------ */
 
 .main-footer {
-  align-items: flex-end;
+  align-items: center;
   min-height: 100px;
 }
 
 /* ------------------ #Socials ------------------ */
 
 .socials {
-  margin: 0;
-  margin-bottom: 28px;
+  display: flex;
+  margin: 0px;
   padding: 0;
   list-style: none;
 }
 
 .socials__item {
-  display: inline-flex;
-  margin-right: 16px;
+  display: block;
+  margin-right: 11px;
 }
 
 .socials__item a {
   display: block;
+  margin: 3px;
   width: 32px;
   height: 32px;
   opacity: .8;
@@ -969,19 +974,19 @@ a:active {
   display: flex;
   align-content: center;
   flex-flow: column wrap;
-  flex-basis: 35%;
-  height: 3rem;
+  max-height: 50px;
   margin: 0;
-  margin-bottom: 18px;
+  margin-left: 30px;
   padding: 0;
   list-style: none;
 }
 
 .doc-links__item {
+  display: inline-flex;
   position: relative;
-  margin-right: 2rem;
+  margin-right: 32px;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 24px;
 }
 
 .doc-links__item a {
@@ -1010,7 +1015,7 @@ a:active {
 
 .copyright {
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
   color: white;
   font-size: 12px;
   line-height: 18px;
