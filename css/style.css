@@ -306,7 +306,7 @@ body {
 
 .main-submenu {
   position: absolute;
-  top: 40px;
+  top: 35px;
   left: -10px;
   z-index: 2;
   display: none;
@@ -493,7 +493,7 @@ body {
 
 .user-bar__item:hover .search-form {
   position: absolute;
-  top: 40px;
+  top: 35px;
   right: 0;
   display: block;
   width: 340px;
@@ -507,7 +507,7 @@ body {
 
 .user-bar__item:hover .sign-up-form {
   position: absolute;
-  top: 40px;
+  top: 35px;
   right: 0;
   display: flex;
   flex-flow: column wrap;
@@ -550,9 +550,112 @@ body {
 
 .user-bar__item:hover .order {
   position: absolute;
-  top: 40px;
+  top: 35px;
   right: 0;
+  display: flex;
+}
+
+.order {
+  flex-flow: column nowrap;
+  align-items: flex-end;
+}
+.order-list {
+  margin: 0;
+  padding: 0;
+}
+.order-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 52px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+.order-item__remove {
+  width: 11px;
+  height: 11px;
+  border: none;
+  margin: 0;
+  margin-top: 11px;
+  margin-right: 15px;
+  background-color: transparent;
+  background-image: url("../img/x-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+.order-item__thumb {
+  width: 33px;
+  height: 33px;
+  border: none;
+  border-radius: 50%;
+  margin: 0;
+  margin-right: 12px;
+}
+.order-item__name {
+  align-self: baseline;
+  margin: 0;
+  margin-top: 10px;
+  margin-right: 20px;
+  width: 220px;
+}
+.order-item__qty {
+  display: inline-flex;
+  justify-content: flex-end;
+  margin: 0;
+  margin-left: auto;
+  margin-top: 10px;
+  white-space: nowrap;
+  width: 100px;
+}
+.order-item__weight {
+
+}
+.order-item__price {
+
+}
+.order-item__cost {
+  display: inline-flex;
+  justify-content: flex-end;
+  margin: 0;
+  margin-top: 10px;
+  margin-right: 16px;
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+.order__total {
+  font-size: 15px;
+  line-height: 18px;
+  color: #323232;
+}
+
+.order-item__weight::after {
+  content: "кг";
+}
+.order-item__price::after {
+  content: "руб.";
+}
+.order-item__cost::after {
+  content: "руб.";
+}
+.order__total-value::after {
+  content: "руб.";
+}
+.order-item--divider {
   display: block;
+  height: 1px;
+}
+.order-item--divider::before {
+  content: "";
+  display: block;
+  width: auto;
+  height: 1px;
+  margin: 5px 0;
+  background: rgb(208, 209, 206);
 }
 
 /* ------------------ #Catalog-heading ------------------ */
