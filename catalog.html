@@ -45,7 +45,7 @@
         </li>
       </ul>
       <ul class="user-bar" aria-label="Пользовательское меню" tabindex="0">
-        <li class="user-bar__item">&nbsp;
+        <li class="user-bar__item" tabindex="0">&nbsp;
           <form class="search-form" action="https://echo.htmlacademy.ru">
             <div class="field-text">
               <label class="field-text__label visually-hidden" for="user-bar-search">Поиск по сайту</label>
@@ -54,7 +54,7 @@
           </form>
         </li>
 
-        <li class="user-bar__item">Вход
+        <li class="user-bar__item" tabindex="0">Вход
           <form class="sign-up-form" action="https://echo.htmlacademy.ru">
 
             <div class="field-text">
@@ -137,10 +137,22 @@
             </select>
           </div>
 
-          <div class="settings__field-range field-range">
-            <label class="field-range__label" for="price-range">Цена:</label>
+          <!-- <div class="settings__field-range field-range">
+            <label class="field-range__label" for="price-range">Цена:100 руб. — 500 руб.</label>
             <input class="field-range__range" id="price-range" type="range" name="price-range" min="100" max="1000" value="500">
-          </div>
+          </div> -->
+
+          <fieldset class="settings__fieldset">
+              <legend class="settings__legend">Цена:100 руб. — 500 руб.</legend>
+              <div class="settings__field-range field-range">
+                <div class="field-range__scale">
+                  <div class="field-range__bar"></div>
+                </div>
+                <div class="field-range__toggle field-range__toggle--min"></div>
+                <div class="field-range__toggle field-range__toggle--max"></div>
+              </div>
+
+          </fieldset>
 
           <fieldset class="settings__fieldset" id="fat-content">
             <legend class="settings__legend">Жирность:</legend>
