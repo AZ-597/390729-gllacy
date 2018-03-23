@@ -615,7 +615,7 @@ body {
 
 }
 .order-item__price {
-
+  color: #999;
 }
 .order-item__cost {
   display: inline-flex;
@@ -634,16 +634,19 @@ body {
 }
 
 .order-item__weight::after {
-  content: "кг";
+  content: "\00A0кг\00A0";
+}
+.order-item__price::before {
+  content: "\00A0";
 }
 .order-item__price::after {
-  content: "руб.";
+  content: "\00A0руб.";
 }
 .order-item__cost::after {
-  content: "руб.";
+  content: "\00A0руб.";
 }
 .order__total-value::after {
-  content: "руб.";
+  content: "\00A0руб.";
 }
 .order-item--divider {
   display: block;
@@ -1029,6 +1032,9 @@ body {
 
 .map {
   position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
   min-height: 430px;
   margin-top: 40px;
   background-image: url("img/bg/map-raster-image.jpg");
