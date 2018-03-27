@@ -2053,3 +2053,56 @@ body {
 .below-header-bar {
   max-height: 40px;
 }
+
+/* ------------------ #Animation ------------------ */
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+}
+@keyframes modal-form-slide-in {
+  from {
+    transform: scale(.2) translateY(-1000px);
+  }
+
+  60% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-in-animation {
+  -webkit-animation-name: modal-fade-in;
+  animation-name: modal-fade-in;
+  animation-duration: .5s;
+  animation-timing-function: cubic-bezier(.2,.09,.05,.97);
+}
+
+.modal-form-in-animation {
+  -webkit-animation-name: modal-form-slide-in;
+  animation-name: modal-form-slide-in;
+  animation-duration: .5s;
+  animation-timing-function: cubic-bezier(.33,.28,.31,1.37);
+}
+
+
+@keyframes modal-fade-out {
+  40% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.modal-out-animation {
+  -webkit-animation-name: modal-fade-out;
+  animation-name: modal-fade-out;
+  animation-duration: .5s;
+  animation-timing-function: cubic-bezier(.2,.09,.05,.97);
+}
