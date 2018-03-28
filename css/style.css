@@ -1109,15 +1109,28 @@ body {
   -ms-flex-item-align: start;
 }
 
-/* .shopping-card:hover .shopping-card__cost {
-  position: absolute;
-  top: 175px;
-  left: 0;
-} */
 
-.shopping-card__cost::after {
-  content: "/кг";
+.shopping-card__cost-postfix {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 36px;
   font-size: 30px;
+}
+
+.shopping-card__cost-postfix::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top:-12px;
+  left:-32px;
+  width: 31px;
+  height: 36px;
+  background-image: url("../img/ruble-sign.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 31px 36px;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
 }
 
 .shopping-card__schild-hit {
@@ -1363,6 +1376,10 @@ body {
   -ms-flex-flow: column nowrap;
 }
 
+.map iframe{
+  width: 100%;
+}
+
 /* ------------------ #Contact ------------------ */
 
 .contact {
@@ -1417,10 +1434,12 @@ body {
 /* ------------------ #Footer ------------------ */
 
 .main-footer {
+  padding-top: 10px;
   align-items: center;
   min-height: 100px;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  outline: 1px dashed red;
 }
 
 /* ------------------ #Socials ------------------ */
@@ -1563,24 +1582,27 @@ body {
 
 .modal {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
   z-index: 9999;
   display: none;
   flex-flow: row nowrap;
   justify-content: space-around;
   background: rgba(0, 0, 0, 0.3);
+  transform: translate3d(-50%, -50%, 0);
   -webkit-box-direction: normal;
-  /* flex */
   -webkit-box-orient: horizontal;
   -ms-flex-flow: row nowrap;
   -ms-flex-pack: distribute;
 }
 
 .get-in-touch {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2060,41 +2082,22 @@ body {
   from {
     opacity: 0;
   }
-
   60% {
     opacity: 1;
-  }
-}
-@keyframes modal-form-slide-in {
-  from {
-    transform: scale(.2) translateY(-1000px);
-  }
-
-  60% {
-    transform: scale(1) translateY(0);
   }
 }
 
 .modal-in-animation {
   -webkit-animation-name: modal-fade-in;
   animation-name: modal-fade-in;
-  animation-duration: .5s;
-  animation-timing-function: cubic-bezier(.2,.09,.05,.97);
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.2, 0.09, 0.05, 0.97);
 }
-
-.modal-form-in-animation {
-  -webkit-animation-name: modal-form-slide-in;
-  animation-name: modal-form-slide-in;
-  animation-duration: .5s;
-  animation-timing-function: cubic-bezier(.33,.28,.31,1.37);
-}
-
 
 @keyframes modal-fade-out {
   40% {
     opacity: 1;
   }
-
   to {
     opacity: 0;
   }
@@ -2103,6 +2106,6 @@ body {
 .modal-out-animation {
   -webkit-animation-name: modal-fade-out;
   animation-name: modal-fade-out;
-  animation-duration: .5s;
-  animation-timing-function: cubic-bezier(.2,.09,.05,.97);
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.2, 0.09, 0.05, 0.97);
 }
