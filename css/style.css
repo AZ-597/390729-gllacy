@@ -1109,27 +1109,27 @@ body {
   -ms-flex-item-align: start;
 }
 
-
 .shopping-card__cost-postfix {
   position: relative;
   display: inline-block;
-  vertical-align: baseline;
   margin-left: 36px;
   font-size: 30px;
+  vertical-align: baseline;
 }
 
 .shopping-card__cost-postfix::before {
   content: "";
-  display: block;
   position: absolute;
-  top:-12px;
-  left:-32px;
+  top: -12px;
+  left: -32px;
+  display: block;
   width: 31px;
   height: 36px;
   background-image: url("../img/ruble-sign.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 31px 36px;
+  -webkit-filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
 }
 
@@ -1376,7 +1376,7 @@ body {
   -ms-flex-flow: column nowrap;
 }
 
-.map iframe{
+.map iframe {
   width: 100%;
 }
 
@@ -1434,12 +1434,11 @@ body {
 /* ------------------ #Footer ------------------ */
 
 .main-footer {
-  padding-top: 10px;
   align-items: center;
   min-height: 100px;
+  padding-top: 10px;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  outline: 1px dashed red;
 }
 
 /* ------------------ #Socials ------------------ */
@@ -1584,13 +1583,14 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 100vw;
-  height: 100vh;
   z-index: 9999;
   display: none;
   flex-flow: row nowrap;
   justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.3);
+  -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
   -webkit-box-direction: normal;
   -webkit-box-orient: horizontal;
@@ -1602,7 +1602,6 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate3d(-50%, -50%, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1615,6 +1614,8 @@ body {
   background: #f8f7f4;
   border: none;
   border-radius: 10px;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
   -webkit-box-align: start;
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
@@ -2078,6 +2079,15 @@ body {
 
 /* ------------------ #Animation ------------------ */
 
+@-webkit-keyframes modal-fade-in {
+  from {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+}
+
 @keyframes modal-fade-in {
   from {
     opacity: 0;
@@ -2090,8 +2100,19 @@ body {
 .modal-in-animation {
   -webkit-animation-name: modal-fade-in;
   animation-name: modal-fade-in;
+  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.2, 0.09, 0.05, 0.97);
   animation-timing-function: cubic-bezier(0.2, 0.09, 0.05, 0.97);
+}
+
+@-webkit-keyframes modal-fade-out {
+  40% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes modal-fade-out {
@@ -2106,6 +2127,8 @@ body {
 .modal-out-animation {
   -webkit-animation-name: modal-fade-out;
   animation-name: modal-fade-out;
+  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.2, 0.09, 0.05, 0.97);
   animation-timing-function: cubic-bezier(0.2, 0.09, 0.05, 0.97);
 }
