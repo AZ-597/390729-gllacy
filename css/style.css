@@ -1368,7 +1368,7 @@ body {
   min-height: 430px;
   margin-top: 40px;
   background-image: url("../img/bg/map-raster-image.jpg");
-  /* outline: 1px dashed aqua; */
+  background-color: palegreen;
   -webkit-box-align: stretch;
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
