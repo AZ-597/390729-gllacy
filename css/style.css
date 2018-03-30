@@ -72,7 +72,7 @@ body {
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: center;
-  min-height: 525px;
+  min-height: 535px;
   -webkit-box-align: center;
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
@@ -224,6 +224,24 @@ body {
 .btn--big:active {
   -webkit-box-shadow: inset 0 2px 2px #952718;
   box-shadow: inset 0 2px 2px #952718;
+}
+
+a.btn.js-open-modal,
+a.btn.js-open-modal:hover,
+a.btn.js-open-modal:active,
+a.btn.js-open-modal:focus {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+a.btn.js-open-modal:active {
+  color: #fceeec;
 }
 
 /* ------------------ #Inputs ------------------ */
@@ -502,6 +520,26 @@ body {
 }
 
 .main-submenu__item--active a {
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+
+.main-submenu__item--active:hover {
+  background: rgb( 208, 112, 88);
+}
+
+.main-submenu__item--active:hover a {
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+
+.main-submenu__item--active:active {
+  background: rgb( 208, 112, 88);
+}
+
+.main-submenu__item--active a:active {
   font-weight: 400;
   color: white;
   text-decoration: none;
@@ -884,28 +922,22 @@ body {
 
 .breadcrumbs a.breadcrumds__item {
   position: relative;
-  /* display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex; */
   display: inline-block;
   margin-right: 17px;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  vertical-align: auto;
+  vertical-align: baseline;
   text-decoration: none;
   border-bottom: 1px solid white;
 }
 
 .breadcrumbs a.breadcrumds__item:hover {
-  /* display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex; */
   display: inline-block;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  vertical-align: auto;
+  vertical-align: baseline;
   text-decoration: none;
   border-bottom: 1px solid #ffbc9e;
 }
@@ -915,20 +947,13 @@ body {
   border-bottom: 0 solid #ffbc9e;
 }
 
-/* .breadcrumbs .breadcrumds__item:not(:last-of-type)::after {
-  content: "»";
-  position: absolute;
-  top: 0;
-  right: -7px;
-  display: inline-block;
-  width: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 16px;
-  vertical-align: auto;
+.breadcrumbs a.breadcrumds__item:last-of-type:hover {
   color: white;
-  text-decoration: none;
-} */
+}
+
+.breadcrumbs a.breadcrumds__item:last-of-type:active {
+  color: white;
+}
 
 .breadcrumbs a.breadcrumds__item::after {
   content: "»";
@@ -940,7 +965,7 @@ body {
   margin: 0;
   font-size: 14px;
   line-height: 16px;
-  vertical-align: auto;
+  vertical-align: baseline;
   color: white;
   text-decoration: none;
 }
@@ -1186,7 +1211,7 @@ body {
 .shopping-card a {
   display: inline-block;
   width: 100%;
-  vertical-align: auto;
+  vertical-align: baseline;
 }
 
 /* ------------------ #Advantages ------------------ */
@@ -1367,8 +1392,8 @@ body {
   align-items: stretch;
   min-height: 430px;
   margin-top: 40px;
-  background-image: url("../img/bg/map-raster-image.jpg");
   background-color: palegreen;
+  background-image: url("../img/bg/map-raster-image.jpg");
   -webkit-box-align: stretch;
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
@@ -2043,12 +2068,15 @@ body {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.catalog-pagination__item--disabled {
-  opacity: 0.2;
+.catalog-pagination__item.catalog-pagination__item--current:hover,
+.catalog-pagination__item.catalog-pagination__item--current:active {
+  color: black;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 1);
 }
 
-.catalog-pagination__item--disabled:hover {
-  background-color: rgba(255, 255, 255, 0);
+.catalog-pagination__item--disabled {
+  opacity: 0.2;
 }
 
 .catalog-pagination__item.catalog-pagination__item--arrow-prev {
@@ -2065,7 +2093,14 @@ body {
   background-position: center center;
 }
 
-/* Crazy classes */
+.catalog-pagination__item.catalog-pagination__item--arrow-prev:hover,
+.catalog-pagination__item.catalog-pagination__item--arrow-next:hover,
+.catalog-pagination__item.catalog-pagination__item--arrow-prev:active,
+.catalog-pagination__item.catalog-pagination__item--arrow-next:active {
+  background-color: transparent;
+}
+
+/* #Etc */
 
 .line-above-footer {
   width: auto;
